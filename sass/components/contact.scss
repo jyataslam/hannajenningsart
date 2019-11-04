@@ -1,0 +1,84 @@
+.contact {
+    padding: 80px 0;
+
+    @include respond(phone){
+        padding: 40px 0;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-group {
+        display: flex;
+    }
+
+    .form-control {
+        font-size: 1.2rem;
+    }
+
+    .form-check {
+        font-size: 1.2rem;
+
+        @include respond(phone){
+            line-height: 2;
+        }
+
+        &-label {
+            margin-left: .5rem;
+        }
+    }
+
+    .form-check:nth-child(2) {
+        margin: 0 2rem;
+        font-size: 1.2rem;
+
+        @include respond(phone){
+            margin: 0 1rem;
+            line-height: 2;
+        }
+    }
+
+    &__hr {
+        padding-bottom: 3rem;
+    }
+
+    &__header {
+        margin: 0 auto 1rem;
+        text-align: center;
+    }
+
+    &__text {
+        color: $color-primary-text;
+        margin: 0 auto 2rem;
+        text-align: center;
+    }
+
+    &__preference {
+        margin: 0;
+        font-size: 1.2rem;
+        color: $color-primary-text;
+
+        @include respond(phone){
+            font-size: 8px;
+            line-height: 2.4;
+        }
+    }
+
+    &__icon {
+        padding-right: 2rem;
+        font-size: 4rem;
+    }
+
+    &__button {
+        color: $color-white;
+        background: $color-primary-blue;
+        border: 2px solid $color-primary-blue;
+
+        &:hover {
+            color: $color-primary-blue;
+            background: $color-white;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.photos {
+    padding-bottom: 60px;
+
+    .row {
+        padding: 0 4px;
+
+        @include respond(phone){
+            padding: 0 2px;
+        }
+    }
+
+    &__column {
+        flex: 25%;
+        max-width: 25%;
+
+        @include respond(tab-port){
+            flex: 50%;
+            max-width: 50%;
+        }
+    }
+
+    &__photo {
+        width: 100%;
+        padding: 4px;
+        transition: all .3s;
+
+        @include respond(phone){
+            padding: 2px;
+        }
+    }
+}

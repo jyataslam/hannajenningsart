@@ -1,0 +1,42 @@
+.map {
+    height: 400px;
+
+    @include respond(phone){
+        height: 300px;
+    }
+}
+
+#mapMarker {
+    background-image: url(/img/map-marker.png);
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.mapboxgl-popup {
+    max-width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mapboxgl-popup-content {
+    padding: 1rem 3rem;
+    color: $color-black;
+    font-weight: bold;
+    font-family: inherit;
+    text-align: center;
+    border-radius: 2rem;
+    color: $color-primary-text;
+}
+
+.mapboxgl-popup-close-button {
+    right: 1rem;
+    top: .5rem;
+    font-size: 1.5rem;
+}
+
+.mapboxgl-ctrl-bottom-right {
+    display: none;
+}

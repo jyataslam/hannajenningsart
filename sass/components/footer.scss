@@ -1,0 +1,61 @@
+.footer {
+    background-color: $color-background-dark;
+    padding: 5rem 0;
+    color: $color-white;
+
+    &__logo--container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    &__logo {
+        margin: 0 auto;
+        height: 200px;
+
+        // Delete filter depending on initial logo color. If logo is white, keep filter.
+        -webkit-filter: invert(100);
+        filter: invert(100);
+
+        @include respond(tab-port){
+            height: 150px;
+        }
+
+        @include respond(phone){
+            height: 100px;
+        }
+    }
+
+    &__tagline {
+        text-align: center;
+        font-style: italic;
+    }
+
+    &__contact--container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        @include respond(phone){
+            padding-top: 3rem;
+        }
+    }
+
+    &__location--wrapper {
+        display: flex;
+        flex-direction: row;
+
+        @include respond(phone){
+            justify-content: center;
+        }
+    }
+
+    &__icon {
+        color: $color-primary-blue;
+        font-size: 3rem;
+    }
+
+    &__text {
+        margin: auto 0 auto 2rem;
+    }
+}

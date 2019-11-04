@@ -1,0 +1,79 @@
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background: url(/img/hero-background.jpg);
+    background: url(/img/avengers-background.jpg);
+    min-height: 100vh;
+    color: $color-white;
+    border: 2rem solid $color-white;
+    background-attachment: scroll;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+    @include respond(tab-port){
+        margin-top: 7rem;
+        min-height: 94vh;
+    }
+
+    @include respond(phone){
+        min-height: 100vh;
+        margin-top: 0;
+        border: none;
+    }
+
+    &__hero-container {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 7vh;
+    }
+
+    &__title {
+        color: $color-white;
+        text-align: center;
+        font-size: 6rem;
+        text-transform: uppercase;
+        letter-spacing: 0.4rem;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+
+        @include respond(tab-port){
+            // padding: 20vh 0 0 0;
+        }
+
+        @include respond(phone){
+            // padding: 20vh 0 0 0;
+        }
+    }
+
+    &__sub-title {
+        color: $color-white;
+        font-weight: 300;
+        text-align: center;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        letter-spacing: 0.13rem;
+    }
+
+    &__button {
+        font-size: 1.2rem;
+        margin: 1.5rem auto 0;
+        border-radius: 25px;
+        padding: 8px 24px;
+        border: 2px solid $color-white;
+        background: transparent;
+        color: $color-white;
+        letter-spacing: .08rem;
+        transition: all .2s ease;
+
+        &:hover {
+            background: $color-white;
+            color: $color-black;
+        }
+
+        &:active {
+            outline: none;
+        }
+    }
+}

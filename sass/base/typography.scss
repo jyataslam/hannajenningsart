@@ -1,0 +1,25 @@
+body {
+    font-weight: 400;
+    /*font-size: 16px;*/
+    line-height: 1.7;
+    color: $color-black;
+    letter-spacing: 0.1rem;
+    background: $color-body;
+}
+
+.general-btn {
+    font-size: 1.2rem;
+    margin: 1.5rem auto 0;
+    border-radius: 25px;
+    padding: 8px 24px;
+    border: 2px solid $color-white;
+    background: transparent;
+    color: $color-white;
+    letter-spacing: .08rem;
+    outline: none;
+    transition: all .2s ease;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

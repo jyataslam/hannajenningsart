@@ -1,0 +1,71 @@
+.services {
+    padding: 30px 0 80px;
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        text-align: center;
+    }
+    
+    .row {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    &__item {
+        width: 33%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 4rem;
+
+        @include respond(phone){
+            width: 100%;
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__photo {
+        border-radius: 50%;
+        margin: auto;
+        height: 200px;
+        width: 200px;
+        object-fit: cover;
+
+        @include respond(tab-port){
+            height: 150px;
+            width: 150px;
+        }
+    }
+
+    &__item-title {
+        padding-top: 2rem;
+        text-align: center;
+        color: $color-black;
+    }
+
+    &__text {
+        color: $color-primary-text;
+        padding-top: 1rem;
+        text-align: center;
+
+        @include respond(phone){
+            padding-top: .5rem;
+        }
+    }
+
+    &__btn {
+        color: $color-primary-blue;
+        border: 2px solid $color-primary-blue;
+
+        &:hover {
+            cursor: pointer;
+            color: $color-white;
+            background: $color-primary-blue;
+        }
+
+        @include respond(phone){
+            margin-top: 1rem;
+        }
+    }
+}

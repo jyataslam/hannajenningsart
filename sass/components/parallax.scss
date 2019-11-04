@@ -1,0 +1,22 @@
+.parallax {
+    min-height: 450px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__header {
+        color: $color-white;
+        margin: 0 auto;
+        padding-bottom: 3rem;
+        text-align: center;
+    }
+
+    &__text {
+        color: $color-white;
+        text-align: center;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
