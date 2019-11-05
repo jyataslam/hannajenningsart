@@ -109,9 +109,28 @@
         }
     }
 
+    &__social {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-right: 3rem;
+
+        &__icon {
+            height: 2.5rem;
+            padding: 0 1rem;
+            fill: $color-white;
+            transition: all .5s;
+
+            &:hover {
+                fill: $color-primary-blue;
+            }
+        }
+    }
+
     &__nav-scrolled {
         background: $color-white;
-        border-bottom: 1px solid $color-primary-blue;
+        border-bottom: 1px solid $color-primary-text;
 
         @include respond(tab-port){
             border-bottom: none;
@@ -120,6 +139,8 @@
 
     &__links-scrolled {
         color: $color-black;
+        fill: $color-black;
+        line-height: 1.9;
     }
 }
 

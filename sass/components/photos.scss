@@ -22,7 +22,12 @@
     &__photo {
         width: 100%;
         padding: 4px;
-        transition: all .3s;
+        opacity: 1;
+        transition: all .5s ease;
+
+        &:hover {
+            opacity: 0;
+        }
 
         @include respond(phone){
             padding: 2px;

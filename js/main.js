@@ -1,3 +1,5 @@
+// import data from './data';
+
 // variables
 const main = $(".main");
 const body = $("body");
@@ -6,7 +8,8 @@ const sidenav = $(".sidenav");
 const desktopNav = $(".navigation");
 const desktopLinks = $(".navigation__item");
 const desktopNavWrapper = $(".navigation__wrapper");
-const navLogo = $('.navigation__logo');
+const socialIcon = $(".navigation__social__icon");
+const navLogo = $(".navigation__logo");
 const parallax = $(".parallax");
 
 $(document).ready(function() {
@@ -17,44 +20,19 @@ $(document).ready(function() {
   $(parallax).parallax({ imageSrc: "/img/photos-one.jpg" });
 });
 
-// Initialize ParticlesJS
-// window.onload = function() {
-//   Particles.init({
-//     selector: ".doctor__background",
-//     maxParticles: 200,
-//     color: '#e1e1e1',
-//     connectParticles: true,
-
-//     responsive: [
-//       {
-//         breakpoint: 768,
-//         options: {
-//           maxParticles: 100,
-//           connectParticles: true
-//         }
-//       },
-//       {
-//         breakpoint: 425,
-//         options: {
-//           maxParticles: 100,
-//           connectParticles: false
-//         }
-//       }
-//     ]
-//   });
-// };
-
 // Handle all scroll events
 $(document).scroll(function() {
   $(this).scrollTop() > 10
     ? ($(desktopNav).addClass("navigation__nav-scrolled"),
       $(desktopLinks).addClass("navigation__links-scrolled"),
+      $(socialIcon).addClass("navigation__links-scrolled"),
       $(desktopNavWrapper).addClass("navigation__wrapper__scrolled"),
-      $(navLogo).addClass('navigation__logo__scrolled'))
+      $(navLogo).addClass("navigation__logo__scrolled"))
     : ($(desktopNav).removeClass("navigation__nav-scrolled"),
       $(desktopLinks).removeClass("navigation__links-scrolled"),
+      $(socialIcon).removeClass("navigation__links-scrolled"),
       $(desktopNavWrapper).removeClass("navigation__wrapper__scrolled"),
-      $(navLogo).removeClass('navigation__logo__scrolled'));
+      $(navLogo).removeClass("navigation__logo__scrolled"));
 });
 
 // Handle Sidenav hamburger click
@@ -71,3 +49,100 @@ handleNavAnimationClick = () => {
     $(body).addClass("no-scroll");
   }
 };
+
+// Pull data to dynamically create art cards in Art section
+const data = [
+  {
+    id: 1,
+    pic: "/img/art/abstract2.jpg",
+    name: "Art Piece 1",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae odio facere quo corrupti distinctio sapiente expedita animi alias, dolor qui quod fuga, nisi consectetur. Sit voluptatem non natus optio. Voluptatum!",
+    url: "#",
+    materials: "Oil on canvas",
+    price: "$100"
+  },
+  {
+    id: 2,
+    pic: "/img/art/abstract3.jpg",
+    name: "Art Piece 2",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae odio facere quo corrupti distinctio sapiente expedita animi alias, dolor qui quod fuga, nisi consectetur. Sit voluptatem non natus optio. Voluptatum!",
+    url: "#",
+    materials: "Oil on canvas",
+    price: "$300"
+  },
+  {
+    id: 3,
+    pic: "/img/art/abstract4.jpg",
+    name: "Art Piece 3",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae odio facere quo corrupti distinctio sapiente expedita animi alias, dolor qui quod fuga, nisi consectetur. Sit voluptatem non natus optio. Voluptatum!",
+    url: "#",
+    materials: "Oil on canvas",
+    price: "$10200"
+  },
+  {
+    id: 4,
+    pic: "/img/art/abstract5.jpg",
+    name: "Art Piece 4",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae odio facere quo corrupti distinctio sapiente expedita animi alias, dolor qui quod fuga, nisi consectetur. Sit voluptatem non natus optio. Voluptatum!",
+    url: "#",
+    materials: "Oil on canvas",
+    price: "$200"
+  },
+  {
+    id: 5,
+    pic: "/img/art/abstract6.jpg",
+    name: "Art Piece 5",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae odio facere quo corrupti distinctio sapiente expedita animi alias, dolor qui quod fuga, nisi consectetur. Sit voluptatem non natus optio. Voluptatum!",
+    url: "#",
+    materials: "Oil on canvas",
+    price: "$550"
+  },
+  {
+    id: 6,
+    pic: "/img/art/abstract7.jpg",
+    name: "Art Piece 6",
+    description:
+      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae odio facere quo corrupti distinctio sapiente expedita animi alias, dolor qui quod fuga, nisi consectetur. Sit voluptatem non natus optio. Voluptatum!",
+    url: "#",
+    materials: "Oil on canvas",
+    price: "$120"
+  }
+];
+
+const buildArtCard = art => {
+  const div = $("<div>");
+  const name = $("<h3>");
+  const a = $("<a>");
+  const img = $("<img>");
+  const description = $("<p>");
+  const materials = $("<p>");
+  const price = $("<h3>");
+  const button = $("<button>Buy Now</button>");
+
+  const artRow = $(".art__row");
+  artRow.append(div);
+  name.append(art.name);
+  description.append(art.description);
+  price.append(art.price);
+  materials.append(art.materials);
+  div.append(img);
+  div.append(name, description, materials, price, button);
+
+  description.attr("class", "art__row__text");
+  price.attr("class", "art__row__price");
+  button.attr("class", "general-btn art__row__button");
+
+  a.attr("href", art.url);
+  img.attr({
+    src: art.pic,
+    class: "art__row__image"
+  });
+  div.attr("class", "art__row__container");
+};
+
+data.forEach(art => buildArtCard(art));

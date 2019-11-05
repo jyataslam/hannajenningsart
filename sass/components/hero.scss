@@ -3,14 +3,14 @@
     justify-content: center;
     align-items: center;
     // background: url(/img/hero-background.jpg);
-    background: url(/img/avengers-background.jpg);
+    background: url(/img/hero-background-redhead.jpg);
     min-height: 100vh;
     color: $color-white;
     border: 2rem solid $color-white;
     background-attachment: scroll;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: bottom;
+    background-position: center;
 
     @include respond(tab-port){
         margin-top: 7rem;
@@ -74,6 +74,18 @@
 
         &:active {
             outline: none;
+        }
+
+        &--store {
+            background: $color-primary-blue;
+            color: $color-white;
+            border: 2px solid $color-primary-blue;
+
+            &:hover {
+                background: $color-white;
+                color: $color-primary-blue;
+                border: 2px solid $color-primary-blue;
+            }
         }
     }
 }
