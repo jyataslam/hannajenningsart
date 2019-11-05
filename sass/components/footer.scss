@@ -55,7 +55,33 @@
         font-size: 3rem;
     }
 
+    a {
+        display: flex;
+    }
+
+    a:hover {
+        text-decoration: none;
+    }
+
     &__text {
         margin: auto 0 auto 2rem;
+        color: $color-white;
+        transition: all .3s;
+
+        &:hover {
+            text-decoration: none;
+            color: $color-primary-blue;
+        }
+    }
+
+    &__copyright--container {
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        padding-top: 5rem;
+    }
+
+    &__copyright--text {
+        color: $color-primary-text;
     }
 }
