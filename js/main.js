@@ -18,6 +18,8 @@ $(document).ready(function() {
     .addEventListener("click", handleNavAnimationClick);
 
   $(parallax).parallax({ imageSrc: "/img/photos-one.jpg" });
+
+  fetchInstagram();
 });
 
 // Handle all scroll events

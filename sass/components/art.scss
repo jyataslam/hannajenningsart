@@ -8,15 +8,23 @@
         padding: 60px 0;
     }
 
+    &__title {
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-weight: 700;
+        font-size: 3.5rem;
+    }
+
     &__hr {
         padding-bottom: 3rem;
     }
 
     &__subheader {
-        color: $color-primary-text;
-        padding-bottom: 3rem;
-        font-weight: 300;
         font-family: inherit;
+        font-weight: 300;
+        color: $color-primary-text;
+        padding: 0 3rem 3rem;
+        text-align: center;
+        font-size: 2rem;
     }
 
     &__row {
@@ -45,7 +53,7 @@
         &__image {
             width: 100%;
             object-fit: cover;
-            height: 42rem;
+            height: 33rem;
             padding-bottom: 2rem;
         }
 
@@ -54,6 +62,7 @@
         }
 
         &__text {
+            font-size: 1.2rem;
             padding: 1rem 4rem;
             color: $color-primary-text;
         }

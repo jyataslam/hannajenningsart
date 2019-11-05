@@ -1,0 +1,79 @@
+.instagram {
+    padding: 80px 0 100px;
+    color: $color-white;
+    background: #111;
+
+    @include respond(phone){
+        padding: 60px 0 80px;
+    }
+
+    &__row {
+        justify-content: space-evenly;
+    }
+
+    &__header {
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 3.5rem;
+        text-align: center;
+        margin-bottom: 1rem;
+        line-height: 2;
+    }
+
+    &__header--container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    &__anchor {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__icon {
+        height: 5rem;
+        padding-left: 1rem;
+    }
+
+    &__hr {
+        border-top: 3px solid $color-white;
+    }
+
+    &__photo--container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    &__photo {
+        height: 24rem;
+        width: 18rem;
+        margin: 10px 1px;
+        overflow: hidden;
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+        background-color: $color-black;
+
+        &:hover .instagram__fetched {
+            transform: scale(1.2);
+            opacity: .3;
+        }
+
+        @include respond(tab-land){
+            height: 200px;
+            width: 200px;
+        }
+
+        @include respond(phone){
+            height: 150px;
+            width: 150px;
+        }
+    }
+
+    &__fetched {
+        height: 100%;
+        transition: all .3s ease-in-out;
+        width: 100%;
+        object-fit: cover;
+    }
+}

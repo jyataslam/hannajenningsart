@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Ink;
+    src: url(/fonts/inktank.ttf)
+}
+
 body {
     font-weight: 400;
     /*font-size: 16px;*/
@@ -17,7 +22,7 @@ body {
     color: $color-white;
     letter-spacing: .08rem;
     outline: none;
-    transition: all .2s ease;
+    transition: all .5s ease;
 
     &:hover {
         cursor: pointer;

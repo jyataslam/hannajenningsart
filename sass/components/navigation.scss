@@ -98,7 +98,6 @@
         color: $color-white;
         padding: 1rem 2rem;
         text-transform: uppercase;
-        font-weight: bold;
         transition: all .2s ease-in-out;
         letter-spacing: .15rem;
         font-size: 2rem;
@@ -130,7 +129,7 @@
 
     &__nav-scrolled {
         background: $color-white;
-        border-bottom: 1px solid $color-primary-text;
+        border-bottom: .5rem solid $color-black;
 
         @include respond(tab-port){
             border-bottom: none;
@@ -285,7 +284,7 @@
 
     &__item {
         color: white;
-        font-size: 1.5rem;
+        font-size: 4rem;
         padding-bottom: .5rem;
     }
 }
