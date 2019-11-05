@@ -213,15 +213,30 @@ body {
     font-size: 2rem; }
     .navigation__item:hover {
       text-decoration: none;
-      color: #367c93; }
+      color: #e02b0f; }
+  .navigation__social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3rem; }
+    .navigation__social__icon {
+      height: 2.5rem;
+      padding: 0 1rem;
+      fill: #fff;
+      transition: all .5s; }
+      .navigation__social__icon:hover {
+        fill: #e02b0f; }
   .navigation__nav-scrolled {
     background: #fff;
-    border-bottom: 1px solid #367c93; }
+    border-bottom: 1px solid #666666; }
     @media only screen and (max-width: 56.25em) {
       .navigation__nav-scrolled {
         border-bottom: none; } }
   .navigation__links-scrolled {
-    color: #000; }
+    color: #000;
+    fill: #000;
+    line-height: 1.9; }
 
 .hamburger {
   background-color: transparent;
@@ -325,7 +340,7 @@ body {
   z-index: 1;
   top: 0;
   right: 0;
-  background: #367c93;
+  background: #e02b0f;
   padding: 50px 0;
   transform: translateX(100vw);
   transition: .5s; }
@@ -353,14 +368,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: url(/img/avengers-background.jpg);
+  background: url(/img/hero-background-redhead.jpg);
   min-height: 100vh;
   color: #fff;
   border: 2rem solid #fff;
   background-attachment: scroll;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: bottom; }
+  background-position: center; }
   @media only screen and (max-width: 56.25em) {
     .hero {
       margin-top: 7rem;
@@ -404,6 +419,14 @@ body {
       color: #000; }
     .hero__button:active {
       outline: none; }
+    .hero__button--store {
+      background: #e02b0f;
+      color: #fff;
+      border: 2px solid #e02b0f; }
+      .hero__button--store:hover {
+        background: #fff;
+        color: #e02b0f;
+        border: 2px solid #e02b0f; }
 
 .services {
   padding: 30px 0 80px;
@@ -446,12 +469,12 @@ body {
       .services__text {
         padding-top: .5rem; } }
   .services__btn {
-    color: #367c93;
-    border: 2px solid #367c93; }
+    color: #000;
+    border: 2px solid #000; }
     .services__btn:hover {
       cursor: pointer;
       color: #fff;
-      background: #367c93; }
+      background: #000; }
     @media only screen and (max-width: 37.5em) {
       .services__btn {
         margin-top: 1rem; } }
@@ -473,7 +496,10 @@ body {
   .photos__photo {
     width: 100%;
     padding: 4px;
-    transition: all .3s; }
+    opacity: 1;
+    transition: all .5s ease; }
+    .photos__photo:hover {
+      opacity: 0; }
     @media only screen and (max-width: 37.5em) {
       .photos__photo {
         padding: 2px; } }
@@ -498,10 +524,7 @@ body {
 
 .doctor {
   padding: 8rem 0 5rem;
-  position: relative;
-  background: url(/img/doctor-background.png);
-  background-size: cover;
-  background-position: center; }
+  position: relative; }
   @media only screen and (max-width: 37.5em) {
     .doctor {
       padding: 7rem 0 1rem; } }
@@ -520,10 +543,11 @@ body {
   .doctor__header {
     text-align: center; }
   .doctor__subheader {
-    color: #367c93;
+    color: #e02b0f;
     text-align: center;
     padding-bottom: 2rem; }
   .doctor__text {
+    color: #666666;
     text-align: left;
     padding: 0 6rem 2rem; }
     @media only screen and (max-width: 56.25em) {
@@ -555,14 +579,14 @@ body {
         margin: 0 auto 1rem; } }
   .doctor__btn--consultation {
     color: #fff;
-    background: #367c93;
-    border: 2px solid #367c93;
+    background: #e02b0f;
+    border: 2px solid #e02b0f;
     margin: inherit; }
     .doctor__btn--consultation:hover {
       cursor: pointer;
       color: #000;
       background: #fff;
-      border: 2px solid #367c93; }
+      border: 2px solid #e02b0f; }
     @media only screen and (max-width: 37.5em) {
       .doctor__btn--consultation {
         margin: auto; } }
@@ -577,7 +601,7 @@ body {
 
 .request {
   padding: 4rem 0;
-  background-color: #367c93;
+  background-color: #252525;
   color: #fff; }
   .request__wrapper {
     display: flex;
@@ -638,6 +662,58 @@ body {
 .mapboxgl-ctrl-bottom-right {
   display: none; }
 
+.art {
+  padding: 120px 0 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  @media only screen and (max-width: 37.5em) {
+    .art {
+      padding: 60px 0; } }
+  .art__hr {
+    padding-bottom: 3rem; }
+  .art__subheader {
+    color: #666666;
+    padding-bottom: 3rem;
+    font-weight: 300;
+    font-family: inherit; }
+  .art__row {
+    padding: 4px;
+    justify-content: space-evenly;
+    flex-wrap: wrap; }
+    .art__row__container {
+      width: 33%;
+      padding: 4px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center; }
+      @media only screen and (max-width: 56.25em) {
+        .art__row__container {
+          width: 50%; } }
+      @media only screen and (max-width: 37.5em) {
+        .art__row__container {
+          width: 100%; } }
+    .art__row__image {
+      width: 100%;
+      object-fit: cover;
+      height: 42rem;
+      padding-bottom: 2rem; }
+    .art__row h4 {
+      padding-top: 2rem; }
+    .art__row__text {
+      padding: 1rem 4rem;
+      color: #666666; }
+    .art__row__button {
+      border: 2px solid #000;
+      color: #fff;
+      background: #000;
+      margin-bottom: 6rem; }
+      .art__row__button:hover {
+        background: #e02b0f;
+        border: 2px solid #e02b0f; }
+
 .footer {
   background-color: #252525;
   padding: 5rem 0;
@@ -674,7 +750,7 @@ body {
       .footer__location--wrapper {
         justify-content: center; } }
   .footer__icon {
-    color: #367c93;
+    color: #e02b0f;
     font-size: 3rem; }
   .footer__text {
     margin: auto 0 auto 2rem; }
@@ -727,8 +803,8 @@ body {
     font-size: 4rem; }
   .contact__button {
     color: #fff;
-    background: #367c93;
-    border: 2px solid #367c93; }
+    background: #e02b0f;
+    border: 2px solid #e02b0f; }
     .contact__button:hover {
-      color: #367c93;
+      color: #e02b0f;
       background: #fff; }

@@ -55,13 +55,13 @@
     }
 
     &__btn {
-        color: $color-primary-blue;
-        border: 2px solid $color-primary-blue;
+        color: $color-black;
+        border: 2px solid $color-black;
 
         &:hover {
             cursor: pointer;
             color: $color-white;
-            background: $color-primary-blue;
+            background: $color-black;
         }
 
         @include respond(phone){
