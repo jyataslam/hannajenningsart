@@ -20,6 +20,12 @@ $(document).ready(function() {
   $(parallax).parallax({ imageSrc: "/img/photos-one.jpg" });
 
   fetchInstagram();
+
+  $("#exampleModalPreview").on("show.bs.modal", function(e) {
+    let imageUrl = $(e.relatedTarget).attr("src");
+    let modalImage = $(".modal-image").attr("src", imageUrl);
+    $('.modal-body').append(modalImage);
+  });
 });
 
 // Handle all scroll events
@@ -142,9 +148,13 @@ const buildArtCard = art => {
   a.attr("href", art.url);
   img.attr({
     src: art.pic,
-    class: "art__row__image"
+    class: "art__row__image",
+    id: "modalActivate",
+    "data-toggle": "modal",
+    "data-target": "#exampleModalPreview"
   });
   div.attr("class", "art__row__container");
 };
 
 data.forEach(art => buildArtCard(art));
+
