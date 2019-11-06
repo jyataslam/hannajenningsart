@@ -731,7 +731,12 @@ body {
       width: 100%;
       object-fit: cover;
       height: 33rem;
-      padding-bottom: 2rem; }
+      padding-bottom: 2rem;
+      opacity: 1;
+      transition: all .5s ease; }
+      .art__row__image:hover {
+        cursor: pointer;
+        opacity: .5; }
     .art__row h4 {
       padding-top: 2rem; }
     .art__row__text {
@@ -746,6 +751,43 @@ body {
       .art__row__button:hover {
         background: #e02b0f;
         border: 2px solid #e02b0f; }
+
+.modal-dialog {
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  max-width: none !important; }
+
+.modal-content {
+  height: auto !important;
+  min-height: 100% !important;
+  border-radius: 0 !important;
+  background-color: #ececec !important; }
+
+.art-close {
+  margin-right: 2rem;
+  font-size: 8rem;
+  color: #fff; }
+
+.modal-body {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #111; }
+
+.modal-image {
+  height: 100%;
+  margin: auto;
+  object-fit: contain;
+  max-width: 100%; }
+
+.art-modal-close {
+  z-index: 1; }
 
 .instagram {
   padding: 80px 0 100px;
@@ -772,7 +814,10 @@ body {
     align-items: center; }
   .instagram__icon {
     height: 5rem;
-    padding-left: 1rem; }
+    padding-left: 1rem;
+    transition: all .5s ease-in-out; }
+    .instagram__icon:hover {
+      transform: rotateX(180deg); }
   .instagram__hr {
     border-top: 3px solid #fff; }
   .instagram__photo--container {
@@ -805,7 +850,7 @@ body {
 
 .footer {
   background-color: #252525;
-  padding: 5rem 0;
+  padding: 5rem 0 2rem;
   color: #fff; }
   .footer__logo--container {
     display: flex;

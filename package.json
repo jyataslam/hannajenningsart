@@ -23,6 +23,7 @@
     "postcss-cli": "^4.1.1"
   },
   "dependencies": {
+    "magnify": "^2.3.3",
     "rellax": "^1.10.0"
   }
 }

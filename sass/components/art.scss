@@ -55,6 +55,13 @@
             object-fit: cover;
             height: 33rem;
             padding-bottom: 2rem;
+            opacity: 1;
+            transition: all .5s ease;
+
+            &:hover {
+                cursor: pointer;
+                opacity: .5;
+            }
         }
 
         h4 {

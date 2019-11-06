@@ -1,128 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <!-- Bootstrap 4 -->
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-    <!-- FontAwesome -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+  <!-- Bootstrap 4 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
 
-    <!-- Mapbox -->
-    <script src="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js"></script>
-    <link
-      href="https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css"
-      rel="stylesheet"
-    />
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Roboto+Mono&display=swap" rel="stylesheet">
+  <!-- Magnify.js -->
 
-    <!-- style.css -->
-    <link rel="stylesheet" href="css/style.css" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Roboto+Mono&display=swap"
+    rel="stylesheet">
 
-    <title>Custom Template 1</title>
-  </head>
+  <!-- style.css -->
+  <link rel="stylesheet" href="css/style.css" />
 
-  <body>
-    <!-- Create Side Nav when open -->
-    <nav id="sidenav" class="sidenav">
-      <div class="container">
-        <div class="row">
-          <ul class="sidenav__list">
-            <li class="sidenav__item">About</li>
-            <li class="sidenav__item">Work</li>
-            <li class="sidenav__item">Contact</li>
-            <li class="sidenav__item">Store</li>
-          </ul>
+  <title>Custom Template 1</title>
+</head>
+
+<body>
+  <!-- Create Side Nav when open -->
+  <nav id="sidenav" class="sidenav">
+    <div class="container">
+      <div class="row">
+        <ul class="sidenav__list">
+          <li class="sidenav__item">About</li>
+          <li class="sidenav__item">Work</li>
+          <li class="sidenav__item">Contact</li>
+          <li class="sidenav__item">Store</li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Side Nav Lines to Open on Smaller Screens -->
+  <nav id="hamburger" class="hamburger">
+    <button id="hamburger__btn" class="hamburger_btn">
+      <span class="hamburger__span"></span><span class="hamburger__span"></span><span class="hamburger__span"></span>
+    </button>
+  </nav>
+
+  <!-- Main Content Wrapper | Put All Body Content Here -->
+  <div class="main" id="main">
+    <!-- Desktop Nav List -->
+    <nav id="navigation" class="navigation">
+      <div class="navigation__wrapper">
+        <div class="navigation__logo-container">
+          <img src="/img/logo-signature.png" class="navigation__logo" alt="Hanna Jennings Logo" />
+        </div>
+        <div class="navigation__list">
+          <div class="navigation__social">
+            <a href="https://www.instagram.com/untitlednumber21/" target="_blank"> <svg class="navigation__social__icon"
+                viewBox="0 0 39 39">
+                <path
+                  d="M19.448,39.006 C8.707,39.006 -0.000,30.276 -0.000,19.506 C-0.000,8.736 8.707,0.005 19.448,0.005 C30.189,0.005 38.896,8.736 38.896,19.506 C38.896,30.276 30.189,39.006 19.448,39.006 ZM27.841,13.287 C27.841,12.066 26.844,11.066 25.626,11.066 L12.802,11.066 C11.583,11.066 10.586,12.066 10.586,13.287 L10.586,26.146 C10.586,27.367 11.583,28.366 12.802,28.366 L25.626,28.366 C26.844,28.366 27.841,27.367 27.841,26.146 L27.841,13.287 ZM25.205,26.376 L13.190,26.376 C12.813,26.376 12.505,26.069 12.505,25.690 L12.505,18.382 L14.088,18.382 C13.945,18.854 13.866,19.351 13.866,19.867 C13.866,22.744 16.268,25.077 19.230,25.077 C22.192,25.077 24.594,22.744 24.594,19.867 C24.594,19.351 24.516,18.854 24.372,18.382 L25.890,18.382 L25.890,25.690 C25.890,26.069 25.582,26.376 25.205,26.376 ZM25.106,16.410 L23.156,16.410 C22.728,16.410 22.379,16.060 22.379,15.631 L22.379,13.768 C22.379,13.339 22.728,12.988 23.156,12.988 L25.106,12.988 C25.533,12.988 25.883,13.339 25.883,13.768 L25.883,15.631 C25.883,16.060 25.533,16.410 25.106,16.410 ZM19.230,23.046 C17.317,23.046 15.765,21.538 15.765,19.680 C15.765,17.819 17.317,16.312 19.230,16.312 C21.144,16.312 22.695,17.819 22.695,19.680 C22.695,21.538 21.144,23.046 19.230,23.046 Z">
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/HuntingtonDigital1/" target="_blank"> <svg
+                class="navigation__social__icon" viewBox="0 0 40 39">
+                <path
+                  d="M20.199,0.005 C9.459,0.005 0.751,8.736 0.751,19.506 C0.751,30.276 9.459,39.006 20.199,39.006 C30.940,39.006 39.648,30.276 39.648,19.506 C39.648,8.736 30.940,0.005 20.199,0.005 ZM25.128,12.289 L23.122,12.290 C21.548,12.290 21.242,13.040 21.242,14.140 L21.242,16.568 L24.997,16.568 L24.508,20.369 L21.242,20.369 L21.242,30.124 L17.328,30.124 L17.328,20.369 L14.053,20.369 L14.053,16.568 L17.328,16.568 L17.328,13.764 C17.328,10.511 19.308,8.738 22.203,8.738 C23.591,8.738 24.782,8.842 25.128,8.888 L25.128,12.289 Z">
+                </path>
+              </svg>
+            </a>
+            <a href="https://twitter.com/huntingtondigit" target="_blank"> <svg class="navigation__social__icon"
+                viewBox="0 0 40 39">
+                <path
+                  d="M20.049,0.005 C9.308,0.005 0.601,8.736 0.601,19.506 C0.601,30.276 9.308,39.006 20.049,39.006 C30.790,39.006 39.497,30.276 39.497,19.506 C39.497,8.736 30.790,0.005 20.049,0.005 ZM27.625,15.541 C27.632,15.709 27.636,15.877 27.636,16.045 C27.636,21.184 23.735,27.108 16.602,27.108 C14.412,27.108 12.373,26.464 10.657,25.362 C10.960,25.397 11.269,25.416 11.581,25.416 C13.399,25.416 15.071,24.794 16.398,23.752 C14.701,23.719 13.269,22.596 12.776,21.051 C13.012,21.096 13.256,21.121 13.505,21.121 C13.858,21.121 14.202,21.073 14.527,20.984 C12.753,20.627 11.416,19.055 11.416,17.171 L11.416,17.123 C11.939,17.413 12.537,17.589 13.173,17.609 C12.133,16.912 11.448,15.721 11.448,14.373 C11.448,13.660 11.639,12.993 11.973,12.417 C13.886,14.771 16.743,16.318 19.966,16.480 C19.900,16.196 19.866,15.900 19.866,15.595 C19.866,13.447 21.602,11.706 23.744,11.706 C24.859,11.706 25.867,12.178 26.576,12.934 C27.459,12.760 28.289,12.436 29.037,11.990 C28.749,12.898 28.133,13.660 27.332,14.141 C28.116,14.048 28.864,13.838 29.559,13.529 C29.038,14.309 28.382,14.994 27.625,15.541 Z">
+                </path>
+              </svg>
+            </a>
+          </div>
+          <a href="#" class="navigation__item">About</a>
+          <a href="#" class="navigation__item">Work</a>
+          <a href="#" class="navigation__item">Contact</a>
+          <a href="#" class="navigation__item">Store</a>
         </div>
       </div>
     </nav>
+    <!-- End of Desktop Nav -->
 
-    <!-- Side Nav Lines to Open on Smaller Screens -->
-    <nav id="hamburger" class="hamburger">
-      <button id="hamburger__btn" class="hamburger_btn">
-        <span class="hamburger__span"></span
-        ><span class="hamburger__span"></span
-        ><span class="hamburger__span"></span>
-      </button>
-    </nav>
+    <!-- Hero section -->
+    <header id="hero" class="hero">
+      <div class="container hero__hero-container">
+        <h1 class="hero__title">Hanna Jennings</h1>
+        <h2 class="hero__sub-title">
+          <span>Art & Other Things</span>
+        </h2>
+        <button class="btn hero__button">View Work</button>
+        <button class="general-btn hero__button--store">
+          Visit Store
+        </button>
+      </div>
+    </header>
+    <!-- End of Hero Section -->
 
-    <!-- Main Content Wrapper | Put All Body Content Here -->
-    <div class="main" id="main">
-      <!-- Desktop Nav List -->
-      <nav id="navigation" class="navigation">
-        <div class="navigation__wrapper">
-          <div class="navigation__logo-container">
-            <img
-              src="/img/logo.png"
-              class="navigation__logo"
-              alt="Company Logo"
-            />
-          </div>
-          <div class="navigation__list">
-            <div class="navigation__social">
-                <a href="https://www.instagram.com/untitlednumber21/" target="_blank"> <svg class="navigation__social__icon"
-                  viewBox="0 0 39 39">
-                  <path
-                      d="M19.448,39.006 C8.707,39.006 -0.000,30.276 -0.000,19.506 C-0.000,8.736 8.707,0.005 19.448,0.005 C30.189,0.005 38.896,8.736 38.896,19.506 C38.896,30.276 30.189,39.006 19.448,39.006 ZM27.841,13.287 C27.841,12.066 26.844,11.066 25.626,11.066 L12.802,11.066 C11.583,11.066 10.586,12.066 10.586,13.287 L10.586,26.146 C10.586,27.367 11.583,28.366 12.802,28.366 L25.626,28.366 C26.844,28.366 27.841,27.367 27.841,26.146 L27.841,13.287 ZM25.205,26.376 L13.190,26.376 C12.813,26.376 12.505,26.069 12.505,25.690 L12.505,18.382 L14.088,18.382 C13.945,18.854 13.866,19.351 13.866,19.867 C13.866,22.744 16.268,25.077 19.230,25.077 C22.192,25.077 24.594,22.744 24.594,19.867 C24.594,19.351 24.516,18.854 24.372,18.382 L25.890,18.382 L25.890,25.690 C25.890,26.069 25.582,26.376 25.205,26.376 ZM25.106,16.410 L23.156,16.410 C22.728,16.410 22.379,16.060 22.379,15.631 L22.379,13.768 C22.379,13.339 22.728,12.988 23.156,12.988 L25.106,12.988 C25.533,12.988 25.883,13.339 25.883,13.768 L25.883,15.631 C25.883,16.060 25.533,16.410 25.106,16.410 ZM19.230,23.046 C17.317,23.046 15.765,21.538 15.765,19.680 C15.765,17.819 17.317,16.312 19.230,16.312 C21.144,16.312 22.695,17.819 22.695,19.680 C22.695,21.538 21.144,23.046 19.230,23.046 Z">
-              </svg>
-          </a>
-          <a href="https://www.facebook.com/HuntingtonDigital1/" target="_blank"> <svg class="navigation__social__icon"
-                  viewBox="0 0 40 39">
-                  <path
-                      d="M20.199,0.005 C9.459,0.005 0.751,8.736 0.751,19.506 C0.751,30.276 9.459,39.006 20.199,39.006 C30.940,39.006 39.648,30.276 39.648,19.506 C39.648,8.736 30.940,0.005 20.199,0.005 ZM25.128,12.289 L23.122,12.290 C21.548,12.290 21.242,13.040 21.242,14.140 L21.242,16.568 L24.997,16.568 L24.508,20.369 L21.242,20.369 L21.242,30.124 L17.328,30.124 L17.328,20.369 L14.053,20.369 L14.053,16.568 L17.328,16.568 L17.328,13.764 C17.328,10.511 19.308,8.738 22.203,8.738 C23.591,8.738 24.782,8.842 25.128,8.888 L25.128,12.289 Z">
-                  </path>
-              </svg>
-          </a>
-          <a href="https://twitter.com/huntingtondigit" target="_blank"> <svg class="navigation__social__icon"
-                  viewBox="0 0 40 39">
-                  <path
-                      d="M20.049,0.005 C9.308,0.005 0.601,8.736 0.601,19.506 C0.601,30.276 9.308,39.006 20.049,39.006 C30.790,39.006 39.497,30.276 39.497,19.506 C39.497,8.736 30.790,0.005 20.049,0.005 ZM27.625,15.541 C27.632,15.709 27.636,15.877 27.636,16.045 C27.636,21.184 23.735,27.108 16.602,27.108 C14.412,27.108 12.373,26.464 10.657,25.362 C10.960,25.397 11.269,25.416 11.581,25.416 C13.399,25.416 15.071,24.794 16.398,23.752 C14.701,23.719 13.269,22.596 12.776,21.051 C13.012,21.096 13.256,21.121 13.505,21.121 C13.858,21.121 14.202,21.073 14.527,20.984 C12.753,20.627 11.416,19.055 11.416,17.171 L11.416,17.123 C11.939,17.413 12.537,17.589 13.173,17.609 C12.133,16.912 11.448,15.721 11.448,14.373 C11.448,13.660 11.639,12.993 11.973,12.417 C13.886,14.771 16.743,16.318 19.966,16.480 C19.900,16.196 19.866,15.900 19.866,15.595 C19.866,13.447 21.602,11.706 23.744,11.706 C24.859,11.706 25.867,12.178 26.576,12.934 C27.459,12.760 28.289,12.436 29.037,11.990 C28.749,12.898 28.133,13.660 27.332,14.141 C28.116,14.048 28.864,13.838 29.559,13.529 C29.038,14.309 28.382,14.994 27.625,15.541 Z">
-                  </path>
-              </svg>
-          </a>
-            </div>
-            <a href="#" class="navigation__item">About</a>
-            <a href="#" class="navigation__item">Work</a>
-            <a href="#" class="navigation__item">Contact</a>
-            <a href="#" class="navigation__item">Store</a>
-          </div>
-        </div>
-      </nav>
-      <!-- End of Desktop Nav -->
-
-      <!-- Hero section -->
-      <header id="hero" class="hero">
-        <div class="container hero__hero-container">
-          <h1 class="hero__title">Hanna Jennings</h1>
-          <h2 class="hero__sub-title">
-            <span>Art & Other Things</span>
-          </h2>
-          <button class="btn hero__button">View Work</button>
-          <button class="general-btn hero__button--store">
-              Visit Store
-          </button>
-        </div>
-      </header>
-      <!-- End of Hero Section -->
-
-      <!-- Services Section -->
-      <!-- <header id="services" class="services">
+    <!-- Services Section -->
+    <!-- <header id="services" class="services">
         <h1 class="services__title">Services</h1>
         <hr class="title__hr" />
         <div class="container">
@@ -175,287 +156,257 @@
           </div>
         </div>
       </header> -->
-      <!-- End of Services Section -->
+    <!-- End of Services Section -->
 
-      <!-- doctor Section -->
-      <div id="doctor" class="doctor">
-          <div class="container-fluid">
-            <div class="row ">
-              <div class="doctor__wrapper col-lg-6 col-sm-12">
-                <h1 class="doctor__header">Meet Hanna Jennings</h1>
-                <h3 class="doctor__subheader">Tyler, TX</h3>
-                <p class="doctor__text">
-                    Born and raised in Texas, I have always looked for the unique. I appreciate both the bold and the understated.  I strive to express myself and my vision in my art. As a Studio Art major at UT, I am thoroughly enjoying the art culture that flows throughout the city. Austin’s energy continues to influence my art in new and exciting ways. I look forward to learning and growing as an artist.  I greatly admire artists like Cy Twombley, Franz Kline and Anthony Lister.  
-                    <br><br>
-                    Recently, I have have begun to work with rougher mediums, like house and spray paints and scrap metal.  Combining these with india ink, acrylic and pastels. I have also experimented with sewing techniques, incorporated into my canvases. I always strive for new and different ways to express my art. I dabble in architecture, fashion and graphic design, oil painting and graffiti. The world is my canvas and my inspiration.
-                </p>
-                <div class="doctor__btn-wrapper">
-                  <!-- <button class="general-btn doctor__btn--more">
+    <!-- doctor Section -->
+    <div id="doctor" class="doctor">
+      <div class="container-fluid">
+        <div class="row ">
+          <div class="doctor__wrapper col-lg-6 col-sm-12">
+            <h1 class="doctor__header">Meet Hanna Jennings</h1>
+            <h3 class="doctor__subheader">Tyler, TX</h3>
+            <p class="doctor__text">
+              Born and raised in Texas, I have always looked for the unique. I appreciate both the bold and the
+              understated. I strive to express myself and my vision in my art. As a Studio Art major at UT, I am
+              thoroughly enjoying the art culture that flows throughout the city. Austin’s energy continues to influence
+              my art in new and exciting ways. I look forward to learning and growing as an artist. I greatly admire
+              artists like Cy Twombley, Franz Kline and Anthony Lister.
+              <br><br>
+              Recently, I have have begun to work with rougher mediums, like house and spray paints and scrap metal.
+              Combining these with india ink, acrylic and pastels. I have also experimented with sewing techniques,
+              incorporated into my canvases. I always strive for new and different ways to express my art. I dabble in
+              architecture, fashion and graphic design, oil painting and graffiti. The world is my canvas and my
+              inspiration.
+            </p>
+            <div class="doctor__btn-wrapper">
+              <!-- <button class="general-btn doctor__btn--more">
                     More About Hanna
                   </button> -->
-                  <button class="general-btn doctor__btn--more">
-                    View Work
-                  </button>
-                </div>
-              </div>
-              <div class="doctor__wrapper col-lg-6 col-sm-12">
-                <img src="/img/doctor-spiderman.jpg" alt="" class="doctor__image" />
-              </div>
-            </div>
-          </div>
-          <!-- <canvas class="doctor__background"></canvas> -->
-        </div>
-        <!-- End Doctor Section -->
-
-      <!-- Photo Gallery Section -->
-      <header id="photos" class="photos">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="photos__column">
-              <img src="/img/photos-seven.jpg" alt="" class="photos__photo" />
-              <img src="/img/photos-three.jpg" alt="" class="photos__photo" />
-            </div>
-            <div class="photos__column">
-              <img src="/img/photos-eight.jpg" alt="" class="photos__photo" />
-              <img src="/img/photos-six.jpg" alt="" class="photos__photo" />
-            </div>
-            <div class="photos__column">
-              <img src="/img/photos-seven.jpg" alt="" class="photos__photo" />
-              <img src="/img/photos-three.jpg" alt="" class="photos__photo" />
-            </div>
-            <div class="photos__column">
-              <img src="/img/photos-two.jpg" alt="" class="photos__photo" />
-              <img src="/img/photos-six.jpg" alt="" class="photos__photo" />
-            </div>
-          </div>
-        </div>
-      </header>
-      <!-- End of Photo Gallery Section -->
-
-      <!-- Parallax Image Section -->
-      <section
-        id="parallax"
-        class="parallax"
-        data-parallax="scroll"
-        data-image-src="/img/parallax-background1.jpg"
-      >
-        <div class="container">
-          <div class="row">
-            <h4 class="col-sm-12 parallax__text">
-              "The world<br>is my canvas<br>and my inspiration."
-            </h4>
-          </div>
-        </div>
-      </section>
-      <!-- End of Parallax Image Section -->
-
-      <!-- Art Section -->
-      <header id="art" class="art">
-          <h1 class="art__title">Work</h1>
-          <hr class="title__hr art__hr" />
-          <h3 class="art__subheader">All artwork is available for purchase on my Etsy store</h3>
-          <div class="container-fluid">
-            <div class="row art__row">
-            </div>
-          </div>
-      </header>
-      <!-- End of Art Section -->
-
-      <!-- Request Section -->
-      <header id="request" class="request">
-          <div class="container">
-            <div class="row">
-              <section class="col-sm-12 request__wrapper">
-                <h1 class="request__tagline">Visit Etsy to see the entire collection</h1>
-                <button class="general-btn request__btn--consultation">
-                  View Store
-                </button>
-              </section>
-            </div>
-          </div>
-      </header>
-        <!-- End of Request Section -->
-
-      <!-- Instagram Section -->
-      <header id="instagram" class="instagram">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-12 instagram__header--container">
-                <h1 class="instagram__header">Follow me on Instagram</h1>
-                <a href="https://www.instagram.com/untitlednumber21/" target="_blank" class="instagram__anchor">
-                  <img src="/img/instagram-logo.png" alt="Instagram Logo Icon" class="instagram__icon">
-                </a>
-            </div>
-            <hr class="title__hr instagram__hr" />
-          </div>
-        </div>
-        <div class="container-fluid">
-          <div class="row instagram__row">
-            <section class="instagram__photo--container">
-              <!-- Dynamically append IG feed here -->
-            </section>
-          </div>
-        </div>
-      </header>
-      <!-- End of Instagram Section -->
-
-      <!-- Contact Section -->
-      <header id="contact" class="contact">
-        <div class="container">
-          <div class="row">
-            <h1 class="col-sm-12 contact__header">Contact</h1>
-            <hr class="title__hr contact__hr" />
-            <h4 class="col-sm-12 contact__text">
-              Questions, comments, or just wanna say hi? Reach out!
-            </h4>
-            <form
-              class="contact-form d-flex flex-column align-items-center col-sm-12"
-              action="#"
-              method="POST"
-            >
-              <div class="form-group w-75">
-                <input
-                  type="name"
-                  class="form-control"
-                  placeholder="Name"
-                  name="name"
-                  required
-                />
-              </div>
-              <div class="form-group w-75">
-                <input
-                  type="email"
-                  class="form-control"
-                  placeholder="Email"
-                  name="name"
-                  required
-                />
-              </div>
-              <div class="form-group w-75">
-                <input
-                  type="phone"
-                  class="form-control"
-                  placeholder="Phone (optional)"
-                  name="name"
-                />
-              </div>
-              <div class="form-group w-75">
-                  <p class="contact__preference">Preferred method of contact: </p>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="exampleRadios"
-                    id="exampleRadios1"
-                    value="option1"
-                    checked
-                  />
-                  <label class="form-check-label" for="exampleRadios1">
-                    Phone
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="radio"
-                    name="exampleRadios"
-                    id="exampleRadios2"
-                    value="option2"
-                  />
-                  <label class="form-check-label" for="exampleRadios2">
-                    Email
-                  </label>
-                </div>
-              </div>
-
-              <div class="form-group w-75">
-                <textarea
-                  class="form-control"
-                  type="text"
-                  placeholder="What's goin on?"
-                  rows="7"
-                  name="name"
-                  required
-                ></textarea>
-              </div>
-
-              <button type="submit" class="btn general-btn contact__button">
-                Send
+              <button class="general-btn doctor__btn--more">
+                View Work
               </button>
-            </form>
-          </div>
-        </div>
-      </header>
-      <!-- End of Contact Section -->
-
-      <!-- Footer -->
-      <header id="footer" class="footer">
-        <div class="container">
-          <div class="row">
-            <section class="col-sm-12 col-md-7 footer__logo--container">
-              <img
-                src="/img/logo.png"
-                alt="Company Logo"
-                class="footer__logo"
-              />
-              <h4 class="footer__tagline">Where Your Dreams Become Reality</h4>
-            </section>
-            <section class="col-sm-12 col-md-5 footer__contact--container">
-              <div class="footer__location--wrapper">
-                <i class="fa fa-map-marker footer__icon" aria-hidden="true"></i>
-                <p class="footer__text">
-                  18575 Jamboree Rd #6, Irvine, CA 92612
-                </p>
-              </div>
-              <div class="footer__location--wrapper">
-                  <i class="fa fa-phone footer__icon" aria-hidden="true"></i>
-                <a href="tel:+7148675309">
-                    <p class="footer__text">
-                        714.867.5309
-                      </p>
-                </a>
-              </div>
-              <div class="footer__location--wrapper">
-                  <i class="fa fa-envelope footer__icon" aria-hidden="true"></i>
-                <a href="mailto:hannajennings21@gmail.com">
-                    <p class="footer__text">
-                        hannajennings21@gmail.com
-                      </p>
-                </a>
-              </div>
-            </section>
-            <div class="col-sm-12 footer__copyright--container">
-              <p class="footer__copyright--text">Copyright © 2019 Huntington Digital, LLC. All rights reserved</p>
             </div>
           </div>
+          <div class="doctor__wrapper col-lg-6 col-sm-12">
+            <img src="/img/doctor-spiderman.jpg" alt="" class="doctor__image" />
+          </div>
         </div>
-      </header>
-      <!-- End of Footer -->
+      </div>
+      <!-- <canvas class="doctor__background"></canvas> -->
     </div>
-    <!-- End of Main Content -->
-  </body>
+    <!-- End Doctor Section -->
 
-  <!-- JS Dependencies -->
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"
-  ></script>
+    <!-- Photo Gallery Section -->
+    <header id="photos" class="photos">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="photos__column">
+            <img src="/img/photos-seven.jpg" alt="" class="photos__photo" />
+            <img src="/img/photos-three.jpg" alt="" class="photos__photo" />
+          </div>
+          <div class="photos__column">
+            <img src="/img/photos-eight.jpg" alt="" class="photos__photo" />
+            <img src="/img/photos-six.jpg" alt="" class="photos__photo" />
+          </div>
+          <div class="photos__column">
+            <img src="/img/photos-seven.jpg" alt="" class="photos__photo" />
+            <img src="/img/photos-three.jpg" alt="" class="photos__photo" />
+          </div>
+          <div class="photos__column">
+            <img src="/img/photos-two.jpg" alt="" class="photos__photo" />
+            <img src="/img/photos-six.jpg" alt="" class="photos__photo" />
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- End of Photo Gallery Section -->
 
-  <script src="/js/parallax.min.js"></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js"
-    type="text/javascript"
-  ></script>
+    <!-- Parallax Image Section -->
+    <section id="parallax" class="parallax" data-parallax="scroll" data-image-src="/img/parallax-background1.jpg">
+      <div class="container">
+        <div class="row">
+          <h4 class="col-sm-12 parallax__text">
+            "The world<br>is my canvas<br>and my inspiration."
+          </h4>
+        </div>
+      </div>
+    </section>
+    <!-- End of Parallax Image Section -->
 
-  <script src="/js/main.js" type="text/javascript"></script>
-  <!-- <script src="/js/mapbox.js" type="text/javascript"></script> -->
-  <script src="/js/instagram.js" type="text/javascript"></script>
+    <!-- Art Section -->
+    <header id="art" class="art">
+      <h1 class="art__title">Work</h1>
+      <hr class="title__hr art__hr" />
+      <h3 class="art__subheader">All artwork is available for purchase on my Etsy store</h3>
+      <div class="container-fluid">
+        <div class="row art__row">
+          <!-- Dynamically append art pieces here -->
+        </div>
+      </div>
+    </header>
+    <!-- End of Art Section -->
+
+    <!-- Art Modal Section -->
+    <div class="modal fade right" id="exampleModalPreview" tabindex="-1" role="dialog"
+      aria-labelledby="exampleModalPreviewLabel" aria-hidden="true">
+      <div class="modal-dialog momodel modal-fluid" role="document">
+        <div class="modal-content ">
+          <div class=" modal-header text-center">
+            <button type="button" class="close art-modal-close" data-dismiss="modal" aria-label="Close">
+                <span class="art-close" aria-hidden="true">&times;</span>
+            </button>
+            </button>
+          </div>
+          <div class="modal-body">
+            <img alt="Art Piece" class="modal-image">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Art Modal Section End -->
+
+    <!-- Request Section -->
+    <header id="request" class="request">
+      <div class="container">
+        <div class="row">
+          <section class="col-sm-12 request__wrapper">
+            <h1 class="request__tagline">Visit Etsy to see the entire collection</h1>
+            <button class="general-btn request__btn--consultation">
+              View Store
+            </button>
+          </section>
+        </div>
+      </div>
+    </header>
+    <!-- End of Request Section -->
+
+    <!-- Instagram Section -->
+    <header id="instagram" class="instagram">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 instagram__header--container">
+            <h1 class="instagram__header">Follow me on Instagram</h1>
+            <a href="https://www.instagram.com/untitlednumber21/" target="_blank" class="instagram__anchor">
+              <img src="/img/instagram-logo.png" alt="Instagram Logo Icon" class="instagram__icon">
+            </a>
+          </div>
+          <hr class="title__hr instagram__hr" />
+        </div>
+      </div>
+      <div class="container-fluid">
+        <div class="row instagram__row">
+          <section class="instagram__photo--container">
+            <!-- Dynamically append IG feed here -->
+          </section>
+        </div>
+      </div>
+    </header>
+    <!-- End of Instagram Section -->
+
+    <!-- Contact Section -->
+    <header id="contact" class="contact">
+      <div class="container">
+        <div class="row">
+          <h1 class="col-sm-12 contact__header">Contact</h1>
+          <hr class="title__hr contact__hr" />
+          <h4 class="col-sm-12 contact__text">
+            Questions, comments, or just wanna say hi? Reach out!
+          </h4>
+          <form class="contact-form d-flex flex-column align-items-center col-sm-12" action="#" method="POST">
+            <div class="form-group w-75">
+              <input type="name" class="form-control" placeholder="Name" name="name" required />
+            </div>
+            <div class="form-group w-75">
+              <input type="email" class="form-control" placeholder="Email" name="name" required />
+            </div>
+            <div class="form-group w-75">
+              <input type="phone" class="form-control" placeholder="Phone (optional)" name="name" />
+            </div>
+            <div class="form-group w-75">
+              <p class="contact__preference">Preferred method of contact: </p>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                  checked />
+                <label class="form-check-label" for="exampleRadios1">
+                  Phone
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2" />
+                <label class="form-check-label" for="exampleRadios2">
+                  Email
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group w-75">
+              <textarea class="form-control" type="text" placeholder="What's goin on?" rows="7" name="name"
+                required></textarea>
+            </div>
+
+            <button type="submit" class="btn general-btn contact__button">
+              Send
+            </button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <!-- End of Contact Section -->
+
+    <!-- Footer -->
+    <header id="footer" class="footer">
+      <div class="container">
+        <div class="row">
+          <section class="col-sm-12 col-md-7 footer__logo--container">
+            <img src="/img/logo-signature.png" alt="Hanna Jennings Logo" class="footer__logo" />
+          </section>
+          <section class="col-sm-12 col-md-5 footer__contact--container">
+            <div class="footer__location--wrapper">
+              <i class="fa fa-map-marker footer__icon" aria-hidden="true"></i>
+              <p class="footer__text">
+                18575 Jamboree Rd #6, Irvine, CA 92612
+              </p>
+            </div>
+            <div class="footer__location--wrapper">
+              <i class="fa fa-phone footer__icon" aria-hidden="true"></i>
+              <a href="tel:+7148675309">
+                <p class="footer__text">
+                  714.867.5309
+                </p>
+              </a>
+            </div>
+            <div class="footer__location--wrapper">
+              <i class="fa fa-envelope footer__icon" aria-hidden="true"></i>
+              <a href="mailto:hannajennings21@gmail.com">
+                <p class="footer__text">
+                  hannajennings21@gmail.com
+                </p>
+              </a>
+            </div>
+          </section>
+          <div class="col-sm-12 footer__copyright--container">
+            <p class="footer__copyright--text">Copyright © 2019 Huntington Digital, LLC. All rights reserved</p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- End of Footer -->
+  </div>
+  <!-- End of Main Content -->
+</body>
+
+<!-- JS Dependencies -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script src="/js/parallax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js" type="text/javascript"></script>
+
+<script src="/js/main.js" type="text/javascript"></script>
+<script src="/js/instagram.js" type="text/javascript"></script>
+
 </html>
