@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
   <!-- Magnify.js -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnify/2.3.3/css/magnify.css">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Roboto+Mono&display=swap"
@@ -31,10 +32,10 @@
     <div class="container">
       <div class="row">
         <ul class="sidenav__list">
-          <li class="sidenav__item">About</li>
-          <li class="sidenav__item">Work</li>
-          <li class="sidenav__item">Contact</li>
-          <li class="sidenav__item">Store</li>
+          <li class="sidenav__item about-link-sidenav">About</li>
+          <li class="sidenav__item work-link-sidenav">Work</li>
+          <li class="sidenav__item contact-link-sidenav">Contact</li>
+          <li class="sidenav__item store-link-sidenav">Store</li>
         </ul>
       </div>
     </div>
@@ -78,10 +79,10 @@
               </svg>
             </a>
           </div>
-          <a href="#" class="navigation__item">About</a>
-          <a href="#" class="navigation__item">Work</a>
-          <a href="#" class="navigation__item">Contact</a>
-          <a href="#" class="navigation__item">Store</a>
+          <p class="navigation__item about-link">About</p>
+          <p class="navigation__item work-link">Work</p>
+          <p class="navigation__item contact-link">Contact</p>
+          <p class="navigation__item store-link">Store</p>
         </div>
       </div>
     </nav>
@@ -158,14 +159,14 @@
       </header> -->
     <!-- End of Services Section -->
 
-    <!-- doctor Section -->
-    <div id="doctor" class="doctor">
+    <!-- about Section -->
+    <div id="about" class="about">
       <div class="container-fluid">
         <div class="row ">
-          <div class="doctor__wrapper col-lg-6 col-sm-12">
-            <h1 class="doctor__header">Meet Hanna Jennings</h1>
-            <h3 class="doctor__subheader">Tyler, TX</h3>
-            <p class="doctor__text">
+          <div class="about__wrapper col-lg-6 col-sm-12">
+            <h1 class="about__header">Meet Hanna Jennings</h1>
+            <h3 class="about__subheader">Tyler, TX</h3>
+            <p class="about__text">
               Born and raised in Texas, I have always looked for the unique. I appreciate both the bold and the
               understated. I strive to express myself and my vision in my art. As a Studio Art major at UT, I am
               thoroughly enjoying the art culture that flows throughout the city. Austin’s energy continues to influence
@@ -178,43 +179,64 @@
               architecture, fashion and graphic design, oil painting and graffiti. The world is my canvas and my
               inspiration.
             </p>
-            <div class="doctor__btn-wrapper">
-              <!-- <button class="general-btn doctor__btn--more">
+            <div class="about__btn-wrapper">
+              <!-- <button class="general-btn about__btn--more">
                     More About Hanna
                   </button> -->
-              <button class="general-btn doctor__btn--more">
+              <button class="general-btn about__btn--more">
                 View Work
               </button>
             </div>
           </div>
-          <div class="doctor__wrapper col-lg-6 col-sm-12">
-            <img src="/img/doctor-spiderman.jpg" alt="" class="doctor__image" />
+          <div class="about__wrapper col-lg-6 col-sm-12">
+            <img src="/img/doctor-spiderman.jpg" alt="hannah jennings profile photo" class="about__image zoom"
+              data-magnify-src="/img/about-spiderman.jpg" />
           </div>
         </div>
       </div>
-      <!-- <canvas class="doctor__background"></canvas> -->
+      <!-- <canvas class="about__background"></canvas> -->
     </div>
-    <!-- End Doctor Section -->
+    <!-- End about Section -->
 
     <!-- Photo Gallery Section -->
     <header id="photos" class="photos">
       <div class="container-fluid">
         <div class="row">
           <div class="photos__column">
-            <img src="/img/photos-seven.jpg" alt="" class="photos__photo" />
-            <img src="/img/photos-three.jpg" alt="" class="photos__photo" />
+            <img src="/img/art-1.jpg" alt="Hanna Jennings original Art Piece" class="photos__photo" />
+            <img src="/img/art-2.png" alt="Hanna Jennings original Art Piece" class="photos__photo" />
           </div>
           <div class="photos__column">
-            <img src="/img/photos-eight.jpg" alt="" class="photos__photo" />
-            <img src="/img/photos-six.jpg" alt="" class="photos__photo" />
+            <img src="/img/art-3.png" alt="Hanna Jennings original Art Piece" class="photos__photo" />
+            <img src="/img/art-4.png" alt="Hanna Jennings original Art Piece" class="photos__photo" />
           </div>
           <div class="photos__column">
-            <img src="/img/photos-seven.jpg" alt="" class="photos__photo" />
-            <img src="/img/photos-three.jpg" alt="" class="photos__photo" />
+            <img src="/img/art-5.png" alt="Hanna Jennings original Art Piece" class="photos__photo" />
+            <img src="/img/art-8.jpg" alt="Hanna Jennings original Art Piece" class="photos__photo" />
           </div>
           <div class="photos__column">
-            <img src="/img/photos-two.jpg" alt="" class="photos__photo" />
-            <img src="/img/photos-six.jpg" alt="" class="photos__photo" />
+            <img src="/img/art-7.jpg" alt="Hanna Jennings original Art Piece" class="photos__photo" />
+            <img src="/img/art-6.jpg" alt="Hanna Jennings original Art Piece" class="photos__photo" />
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid photos__gray--container">
+        <div class="row">
+          <div class="photos__gray--container__column">
+            <img src="/img/art-1-bw.jpeg" alt="Hanna Jennings original Art Piece" class="photos__gray--container__photo" />
+            <img src="/img/art-2-bw.png" alt="Hanna Jennings original Art Piece" class="photos__gray--container__photo" />
+          </div>
+          <div class="photos__gray--container__column">
+            <img src="/img/art-3-bw.png" alt="Hanna Jennings original Art Piece" class="photos__gray--container__photo" />
+            <img src="/img/art-4-bw.png" alt="Hanna Jennings original Art Piece" class="photos__gray--container__photo" />
+          </div>
+          <div class="photos__gray--container__column">
+            <img src="/img/art-5-bw.png" alt="Hanna Jennings original Art Piece" class="photos__gray--container__photo" />
+            <img src="/img/art-8-bw.jpeg" alt="Hanna Jennings original Art Piece" class="photos__gray--container__photo" />
+          </div>
+          <div class="photos__gray--container__column">
+            <img src="/img/art-7-bw.jpeg" alt="Hanna Jennings original Art Piece" class="photos__gray--container__photo" />
+            <img src="/img/art-6-bw.jpeg" alt="Hanna Jennings original Art Piece" class="photos__gray--container__photo" />
           </div>
         </div>
       </div>
@@ -253,12 +275,12 @@
         <div class="modal-content ">
           <div class=" modal-header text-center">
             <button type="button" class="close art-modal-close" data-dismiss="modal" aria-label="Close">
-                <span class="art-close" aria-hidden="true">&times;</span>
+              <span class="art-close" aria-hidden="true">&times;</span>
             </button>
             </button>
           </div>
           <div class="modal-body">
-            <img alt="Art Piece" class="modal-image">
+            <img alt="Art Piece" class="modal-image zoom">
           </div>
         </div>
       </div>
@@ -393,6 +415,7 @@
     <!-- End of Footer -->
   </div>
   <!-- End of Main Content -->
+
 </body>
 
 <!-- JS Dependencies -->
@@ -404,9 +427,12 @@
   integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 <script src="/js/parallax.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/particlesjs/2.2.2/particles.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnify/2.3.3/js/jquery.magnify.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnify/2.3.3/js/jquery.magnify-mobile.js"
+  type="text/javascript"></script>
 
 <script src="/js/main.js" type="text/javascript"></script>
 <script src="/js/instagram.js" type="text/javascript"></script>
+<script src="/js/scroll.js" type="text/javascript"></script>
 
 </html>
