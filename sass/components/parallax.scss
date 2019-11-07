@@ -17,4 +17,10 @@
         margin: 0 auto;
         text-align: left;
     }
+
+    &__logo {
+        -webkit-filter: invert(100);
+        filter: invert(100);
+        height: 18rem;
+    }
 }

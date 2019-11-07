@@ -15,6 +15,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 1em = 16px
 */
+@import url(/node_modules/magnify/dist/css/magnify.css);
 @keyframes span-first-on {
   0% {
     transform: translate(-50%, -300%); }
@@ -194,6 +195,10 @@ body {
     @media only screen and (max-width: 56.25em) {
       .navigation__logo {
         margin-bottom: 0; } }
+    @media only screen and (max-width: 37.5em) {
+      .navigation__logo {
+        -webkit-filter: none;
+        filter: none; } }
   .navigation__list {
     display: flex;
     text-align: right;
@@ -213,7 +218,8 @@ body {
     text-transform: uppercase;
     transition: all .2s ease-in-out;
     letter-spacing: .15rem;
-    font-size: 2rem; }
+    font-size: 2rem;
+    margin-bottom: 0; }
     .navigation__item:hover {
       text-decoration: none;
       color: #e02b0f; }
@@ -488,6 +494,7 @@ body {
         margin-top: 1rem; } }
 
 .photos {
+  position: relative;
   padding-bottom: 60px; }
   .photos .row {
     padding: 0 4px; }
@@ -503,14 +510,36 @@ body {
         max-width: 50%; } }
   .photos__photo {
     width: 100%;
-    padding: 4px;
-    opacity: 1;
-    transition: all .5s ease; }
-    .photos__photo:hover {
-      opacity: 0; }
+    padding: 4px; }
     @media only screen and (max-width: 37.5em) {
       .photos__photo {
         padding: 2px; } }
+  .photos__gray--container {
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .photos__gray--container .row {
+      padding: 0 4px; }
+      @media only screen and (max-width: 37.5em) {
+        .photos__gray--container .row {
+          padding: 0 2px; } }
+    .photos__gray--container__column {
+      flex: 25%;
+      max-width: 25%; }
+      @media only screen and (max-width: 56.25em) {
+        .photos__gray--container__column {
+          flex: 50%;
+          max-width: 50%; } }
+    .photos__gray--container__photo {
+      width: 100%;
+      padding: 4px;
+      opacity: 1;
+      transition: opacity .3s ease-in-out; }
+      .photos__gray--container__photo:hover {
+        opacity: 0; }
+      @media only screen and (max-width: 37.5em) {
+        .photos__gray--container__photo {
+          padding: 2px; } }
 
 .parallax {
   min-height: 450px;
@@ -528,86 +557,90 @@ body {
     text-align: center;
     margin: 0 auto;
     text-align: left; }
+  .parallax__logo {
+    -webkit-filter: invert(100);
+    filter: invert(100);
+    height: 18rem; }
 
-.doctor {
+.about {
   padding: 8rem 0 5rem;
   position: relative; }
   @media only screen and (max-width: 37.5em) {
-    .doctor {
+    .about {
       padding: 7rem 0 1rem; } }
-  .doctor .row {
+  .about .row {
     padding-bottom: 4rem; }
     @media only screen and (max-width: 56.25em) {
-      .doctor .row {
+      .about .row {
         padding-bottom: 8rem; } }
     @media only screen and (max-width: 37.5em) {
-      .doctor .row {
+      .about .row {
         padding-bottom: 4rem; } }
-  .doctor__image {
+  .about__image {
     width: 85%;
     margin: auto;
     box-shadow: 2px 3px 8px rgba(0, 0, 0, 0.2); }
     @media only screen and (max-width: 37.5em) {
-      .doctor__image {
+      .about__image {
         width: 100%; } }
-  .doctor__header {
+  .about__header {
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 3.5rem;
     text-align: center; }
-  .doctor__subheader {
+  .about__subheader {
     font-family: 'Open Sans Condensed', sans-serif;
     color: #e02b0f;
     text-align: center;
     padding-bottom: 2rem; }
-  .doctor__text {
+  .about__text {
     color: #666666;
     text-align: left;
     padding: 0 6rem 2rem;
     font-size: 1.2rem; }
     @media only screen and (max-width: 56.25em) {
-      .doctor__text {
+      .about__text {
         padding: 0 6rem 2rem; } }
     @media only screen and (max-width: 37.5em) {
-      .doctor__text {
+      .about__text {
         padding: 0 0 1rem; } }
-  .doctor__wrapper {
+  .about__wrapper {
     display: flex;
     flex-direction: column;
     justify-content: center; }
-  .doctor__btn-wrapper {
+  .about__btn-wrapper {
     display: flex;
     justify-content: space-evenly; }
     @media only screen and (max-width: 56.25em) {
-      .doctor__btn-wrapper {
+      .about__btn-wrapper {
         padding-bottom: 4rem; } }
     @media only screen and (max-width: 37.5em) {
-      .doctor__btn-wrapper {
+      .about__btn-wrapper {
         flex-direction: column; } }
-  .doctor__btn--more {
+  .about__btn--more {
     color: #000;
     border: 2px solid #000;
     margin: inherit; }
-    .doctor__btn--more:hover {
+    .about__btn--more:hover {
       cursor: pointer;
       color: #fff;
       background: #000; }
     @media only screen and (max-width: 37.5em) {
-      .doctor__btn--more {
+      .about__btn--more {
         margin: 0 auto 1rem; } }
-  .doctor__btn--consultation {
+  .about__btn--consultation {
     color: #fff;
     background: #e02b0f;
     border: 2px solid #e02b0f;
     margin: inherit; }
-    .doctor__btn--consultation:hover {
+    .about__btn--consultation:hover {
       cursor: pointer;
       color: #000;
       background: #fff;
       border: 2px solid #e02b0f; }
     @media only screen and (max-width: 37.5em) {
-      .doctor__btn--consultation {
+      .about__btn--consultation {
         margin: auto; } }
-  .doctor__background {
+  .about__background {
     position: absolute;
     overflow: hidden;
     top: 0;
@@ -709,6 +742,8 @@ body {
     padding: 0 3rem 3rem;
     text-align: center;
     font-size: 2rem; }
+  .art__photo--wrapper {
+    height: 45rem; }
   .art__row {
     padding: 4px;
     justify-content: space-evenly;
@@ -719,7 +754,6 @@ body {
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      justify-content: space-evenly;
       align-items: center; }
       @media only screen and (max-width: 56.25em) {
         .art__row__container {
@@ -730,7 +764,7 @@ body {
     .art__row__image {
       width: 100%;
       object-fit: cover;
-      height: 33rem;
+      height: 41rem;
       padding-bottom: 2rem;
       opacity: 1;
       transition: all .5s ease; }
@@ -763,7 +797,8 @@ body {
   height: auto !important;
   min-height: 100% !important;
   border-radius: 0 !important;
-  background-color: #ececec !important; }
+  background-color: #ececec !important;
+  border: none; }
 
 .art-close {
   margin-right: 2rem;

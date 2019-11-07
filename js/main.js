@@ -1,8 +1,8 @@
-// import data from './data';
 
 // variables
 const main = $(".main");
 const body = $("body");
+const html = $('html');
 const hamburger = $(".hamburger");
 const sidenav = $(".sidenav");
 const desktopNav = $(".navigation");
@@ -11,25 +11,25 @@ const desktopNavWrapper = $(".navigation__wrapper");
 const socialIcon = $(".navigation__social__icon");
 const navLogo = $(".navigation__logo");
 const parallax = $(".parallax");
+const modalBody = $('.modal-body');
+const modalTrigger = $('#exampleModalPreview');
 
-$(document).ready(function() {
-  document
-    .getElementById("hamburger")
-    .addEventListener("click", handleNavAnimationClick);
+$(document).ready(function () {
+  $('#hamburger').click(handleNavAnimationClick);
 
   $(parallax).parallax({ imageSrc: "/img/photos-one.jpg" });
 
   fetchInstagram();
 
-  $("#exampleModalPreview").on("show.bs.modal", function(e) {
+  $(modalTrigger).on("show.bs.modal", e => {
     let imageUrl = $(e.relatedTarget).attr("src");
     let modalImage = $(".modal-image").attr("src", imageUrl);
-    $('.modal-body').append(modalImage);
+    $(modalBody).append(modalImage);
   });
 });
 
 // Handle all scroll events
-$(document).scroll(function() {
+$(document).scroll(function () {
   $(this).scrollTop() > 10
     ? ($(desktopNav).addClass("navigation__nav-scrolled"),
       $(desktopLinks).addClass("navigation__links-scrolled"),
@@ -50,15 +50,64 @@ handleNavAnimationClick = () => {
     $(sidenav).removeClass("sidenav-transform-x");
     $(main).removeClass("main-transform-x");
     $(body).removeClass("no-scroll");
+    $(html).removeClass("no-scroll");
   } else {
     $(hamburger).addClass("on");
     $(sidenav).addClass("sidenav-transform-x");
     $(main).addClass("main-transform-x");
     $(body).addClass("no-scroll");
+    $(html).addClass("no-scroll");
   }
 };
 
-// Pull data to dynamically create art cards in Art section
+$.fn.scrollView = function () {
+  return this.each(function () {
+    $('html, body').animate({
+      scrollTop: $(this).offset().top
+    }, 1000);
+  });
+}
+
+$('.navigation__logo').on('click', e => {
+  e.preventDefault();
+  $('#hero').scrollView();
+})
+
+$('.about-link-sidenav').on('click', e => {
+  e.preventDefault();
+  handleNavAnimationClick();
+  $('#about').scrollView();
+})
+
+$('.work-link-sidenav').on('click', e => {
+  e.preventDefault();
+  handleNavAnimationClick();
+  $('.art').scrollView();
+})
+
+$('.contact-link-sidenav').on('click', e => {
+  e.preventDefault();
+  handleNavAnimationClick();
+  $('#contact').scrollView();
+})
+
+$('.about-link').on('click', e => {
+  e.preventDefault();
+  $('#about').scrollView();
+})
+
+$('.work-link').on('click', e => {
+  e.preventDefault();
+  $('.art').scrollView();
+})
+
+$('.contact-link').on('click', e => {
+  e.preventDefault();
+  $('#contact').scrollView();
+})
+
+
+// Pull data to dynamically create art cards in Art section. This might be destroyed once Etsy API is integrated
 const data = [
   {
     id: 1,
