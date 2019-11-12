@@ -23,7 +23,7 @@
   <!-- style.css -->
   <link rel="stylesheet" href="css/style.css" />
 
-  <title>Custom Template 1</title>
+  <title>Hanna Jennings</title>
 </head>
 
 <body>
@@ -34,8 +34,9 @@
         <ul class="sidenav__list">
           <li class="sidenav__item about-link-sidenav">About</li>
           <li class="sidenav__item work-link-sidenav">Work</li>
+          <li class="sidenav__item social-link-sidenav">Social</li>
           <li class="sidenav__item contact-link-sidenav">Contact</li>
-          <li class="sidenav__item store-link-sidenav">Store</li>
+          <a href="https://www.etsy.com/shop/untitled21" target="_blank" class="sidenav__item store-link-sidenav">Store</a>
         </ul>
       </div>
     </div>
@@ -81,8 +82,9 @@
           </div>
           <p class="navigation__item about-link">About</p>
           <p class="navigation__item work-link">Work</p>
+          <p class="navigation__item social-link">Social</p>
           <p class="navigation__item contact-link">Contact</p>
-          <p class="navigation__item store-link">Store</p>
+          <a href="https://www.etsy.com/shop/untitled21" target="_blank" class="navigation__item store-link">Store</a>
         </div>
       </div>
     </nav>
@@ -93,12 +95,12 @@
       <div class="container hero__hero-container">
         <h1 class="hero__title">Hanna Jennings</h1>
         <h2 class="hero__sub-title">
-          <span>Art & Other Things</span>
+          <span>Artist & Designer</span>
         </h2>
         <button class="btn hero__button">View Work</button>
-        <button class="general-btn hero__button--store">
+        <a href="https://www.etsy.com/shop/untitled21" target="_blank" class="general-btn hero__button--store">
           Visit Store
-        </button>
+        </a>
       </div>
     </header>
     <!-- End of Hero Section -->
@@ -223,20 +225,28 @@
       <div class="container-fluid photos__gray--container">
         <div class="row">
           <div class="photos__gray--container__column">
-            <img src="/img/art-1-bw.jpeg" alt="Hanna Jennings original Art Piece" class="photos__gray--container__photo" />
-            <img src="/img/art-2-bw.png" alt="Hanna Jennings original Art Piece" class="photos__gray--container__photo" />
+            <img src="/img/art-1-bw.jpeg" alt="Hanna Jennings original Art Piece"
+              class="photos__gray--container__photo" />
+            <img src="/img/art-2-bw.png" alt="Hanna Jennings original Art Piece"
+              class="photos__gray--container__photo" />
           </div>
           <div class="photos__gray--container__column">
-            <img src="/img/art-3-bw.png" alt="Hanna Jennings original Art Piece" class="photos__gray--container__photo" />
-            <img src="/img/art-4-bw.png" alt="Hanna Jennings original Art Piece" class="photos__gray--container__photo" />
+            <img src="/img/art-3-bw.png" alt="Hanna Jennings original Art Piece"
+              class="photos__gray--container__photo" />
+            <img src="/img/art-4-bw.png" alt="Hanna Jennings original Art Piece"
+              class="photos__gray--container__photo" />
           </div>
           <div class="photos__gray--container__column">
-            <img src="/img/art-5-bw.png" alt="Hanna Jennings original Art Piece" class="photos__gray--container__photo" />
-            <img src="/img/art-8-bw.jpeg" alt="Hanna Jennings original Art Piece" class="photos__gray--container__photo" />
+            <img src="/img/art-5-bw.png" alt="Hanna Jennings original Art Piece"
+              class="photos__gray--container__photo" />
+            <img src="/img/art-8-bw.jpeg" alt="Hanna Jennings original Art Piece"
+              class="photos__gray--container__photo" />
           </div>
           <div class="photos__gray--container__column">
-            <img src="/img/art-7-bw.jpeg" alt="Hanna Jennings original Art Piece" class="photos__gray--container__photo" />
-            <img src="/img/art-6-bw.jpeg" alt="Hanna Jennings original Art Piece" class="photos__gray--container__photo" />
+            <img src="/img/art-7-bw.jpeg" alt="Hanna Jennings original Art Piece"
+              class="photos__gray--container__photo" />
+            <img src="/img/art-6-bw.jpeg" alt="Hanna Jennings original Art Piece"
+              class="photos__gray--container__photo" />
           </div>
         </div>
       </div>
@@ -258,8 +268,11 @@
     <!-- Art Section -->
     <header id="art" class="art">
       <h1 class="art__title">Work</h1>
-      <hr class="title__hr art__hr" />
+      <!-- <hr class="title__hr art__hr" /> -->
       <h3 class="art__subheader">All artwork is available for purchase on my Etsy store</h3>
+      <a href="https://www.etsy.com/shop/untitled21" target="_blank" class="general-btn art__button">
+          Visit Store
+      </a>
       <div class="container-fluid">
         <div class="row art__row">
           <!-- Dynamically append art pieces here -->
@@ -293,9 +306,9 @@
         <div class="row">
           <section class="col-sm-12 request__wrapper">
             <h1 class="request__tagline">Visit Etsy to see the entire collection</h1>
-            <button class="general-btn request__btn--consultation">
+            <a href="https://www.etsy.com/shop/untitled21" target="_blank" class="general-btn request__btn--consultation">
               View Store
-            </button>
+            </a>
           </section>
         </div>
       </div>
@@ -304,18 +317,33 @@
 
     <!-- Instagram Section -->
     <header id="instagram" class="instagram">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 instagram__header--container">
-            <h1 class="instagram__header">Follow me on Instagram</h1>
-            <a href="https://www.instagram.com/untitlednumber21/" target="_blank" class="instagram__anchor">
-              <img src="/img/instagram-logo.png" alt="Instagram Logo Icon" class="instagram__icon">
-            </a>
+      <h1 class="instagram__header">Instagram</h1>
+      <!-- <hr class="title__hr instagram__hr"> -->
+      <header>
+        <div class="container">
+          <div class="profile">
+            <div class="profile-image">
+              <img class="profile-image-main"
+                alt="Hanna Jennings instagram profile image">
+            </div>
+            <div class="profile-user-settings">
+              <h1 class="profile-user-name"></h1>
+                <a href="https://www.instagram.com/untitlednumber21/" target="_blank" class="instagram__follow">Follow</a>
+            </div>
+            <div class="profile-stats">
+              <ul>
+                <li><span class="profile-stat-count profile-post-count"></span> posts</li>
+                <li><span class="profile-stat-count profile-follower-count"></span> followers</li>
+                <li><span class="profile-stat-count profile-following-count"></span> following</li>
+              </ul>
+            </div>
+            <div class="profile-bio">
+              <p class="profile-real-name"></p><p class="profile-bio-text"></p>
+            </div>
           </div>
-          <hr class="title__hr instagram__hr" />
         </div>
-      </div>
-      <div class="container-fluid">
+      </header>
+      <div class="container instagram__container">
         <div class="row instagram__row">
           <section class="instagram__photo--container">
             <!-- Dynamically append IG feed here -->
@@ -325,8 +353,24 @@
     </header>
     <!-- End of Instagram Section -->
 
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+      <h1 class="blog__header">Blog</h1>
+      <!-- <hr class="title__hr blog__hr"> -->
+      <div class="container">
+        <div class="row">
+          <p class="blog__header--text-main">Get up-to-date on my latest works</p>
+          <p class="blog__header--text-sub">Visit <a href="https://medium.com/@andrewly">Medium</a> to read more</p>
+        </div>
+      </div>
+      <ul class="blog__slider">
+        <!-- Dynamically append blog posts from Medium -->
+      </ul>
+    </section>
+    <!-- End of Blog Section -->
+
     <!-- Contact Section -->
-    <header id="contact" class="contact">
+    <!-- <header id="contact" class="contact">
       <div class="container">
         <div class="row">
           <h1 class="col-sm-12 contact__header">Contact</h1>
@@ -372,7 +416,7 @@
           </form>
         </div>
       </div>
-    </header>
+    </header> -->
     <!-- End of Contact Section -->
 
     <!-- Footer -->

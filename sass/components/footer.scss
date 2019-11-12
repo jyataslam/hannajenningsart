@@ -17,6 +17,10 @@
         -webkit-filter: invert(100);
         filter: invert(100);
 
+        &:hover {
+            cursor: pointer;
+        }
+
         @include respond(tab-port){
             height: 150px;
         }
@@ -61,6 +65,7 @@
 
     a:hover {
         text-decoration: none;
+        cursor: pointer;
     }
 
     &__text {
@@ -82,6 +87,6 @@
     }
 
     &__copyright--text {
-        color: $color-primary-text;
+        color: $color-white;
     }
 }

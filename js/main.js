@@ -1,8 +1,7 @@
-
 // variables
 const main = $(".main");
 const body = $("body");
-const html = $('html');
+const html = $("html");
 const hamburger = $(".hamburger");
 const sidenav = $(".sidenav");
 const desktopNav = $(".navigation");
@@ -11,15 +10,16 @@ const desktopNavWrapper = $(".navigation__wrapper");
 const socialIcon = $(".navigation__social__icon");
 const navLogo = $(".navigation__logo");
 const parallax = $(".parallax");
-const modalBody = $('.modal-body');
-const modalTrigger = $('#exampleModalPreview');
+const modalBody = $(".modal-body");
+const modalTrigger = $("#exampleModalPreview");
 
-$(document).ready(function () {
-  $('#hamburger').click(handleNavAnimationClick);
+$(document).ready(function() {
+  $("#hamburger").click(handleNavAnimationClick);
 
   $(parallax).parallax({ imageSrc: "/img/photos-one.jpg" });
 
   fetchInstagram();
+  fetchBlogPosts();
 
   $(modalTrigger).on("show.bs.modal", e => {
     let imageUrl = $(e.relatedTarget).attr("src");
@@ -29,7 +29,7 @@ $(document).ready(function () {
 });
 
 // Handle all scroll events
-$(document).scroll(function () {
+$(document).scroll(function() {
   $(this).scrollTop() > 10
     ? ($(desktopNav).addClass("navigation__nav-scrolled"),
       $(desktopLinks).addClass("navigation__links-scrolled"),
@@ -60,52 +60,65 @@ handleNavAnimationClick = () => {
   }
 };
 
-$.fn.scrollView = function () {
-  return this.each(function () {
-    $('html, body').animate({
-      scrollTop: $(this).offset().top
-    }, 1000);
+$.fn.scrollView = function() {
+  return this.each(function() {
+    $("html, body").animate(
+      {
+        scrollTop: $(this).offset().top
+      },
+      1000
+    );
   });
-}
+};
 
-$('.navigation__logo').on('click', e => {
+$(".navigation__logo, .footer__logo").on("click", e => {
   e.preventDefault();
-  $('#hero').scrollView();
-})
+  $("#hero").scrollView();
+});
 
-$('.about-link-sidenav').on('click', e => {
-  e.preventDefault();
-  handleNavAnimationClick();
-  $('#about').scrollView();
-})
-
-$('.work-link-sidenav').on('click', e => {
+$(".about-link-sidenav").on("click", e => {
   e.preventDefault();
   handleNavAnimationClick();
-  $('.art').scrollView();
-})
+  $("#about").scrollView();
+});
 
-$('.contact-link-sidenav').on('click', e => {
+$(".work-link-sidenav").on("click", e => {
   e.preventDefault();
   handleNavAnimationClick();
-  $('#contact').scrollView();
-})
+  $(".art").scrollView();
+});
 
-$('.about-link').on('click', e => {
+$(".social-link-sidenav").on("click", e => {
   e.preventDefault();
-  $('#about').scrollView();
-})
+  handleNavAnimationClick();
+  $(".instagram").scrollView();
+});
 
-$('.work-link').on('click', e => {
+$(".contact-link-sidenav").on("click", e => {
   e.preventDefault();
-  $('.art').scrollView();
-})
+  handleNavAnimationClick();
+  $("#footer").scrollView();
+});
 
-$('.contact-link').on('click', e => {
+$(".about-link").on("click", e => {
   e.preventDefault();
-  $('#contact').scrollView();
-})
+  $("#about").scrollView();
+});
 
+$(".work-link, .hero__button, .about__btn--more").on("click", e => {
+  e.preventDefault();
+  $(".art").scrollView();
+});
+
+$(".social-link").on("click", e => {
+  e.preventDefault();
+  $("#instagram").scrollView();
+});
+
+$(".contact-link").on("click", e => {
+  e.preventDefault();
+  $("#footer").scrollView();
+});
 
 // Pull data to dynamically create art cards in Art section. This might be destroyed once Etsy API is integrated
 const data = [
@@ -207,3 +220,57 @@ const buildArtCard = art => {
 
 data.forEach(art => buildArtCard(art));
 
+// Fetch Blog Posts from Medium
+const fetchBlogPosts = () => {
+  fetch(
+    "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@andrewly"
+  )
+    .then(res => res.json())
+    .then(data => {
+      // Filter for acctual posts. Comments don't have categories, therefore can filter for items with categories bigger than 0
+      const res = data.items; //This is an array with the content. No feed, no info about author etc.
+      const posts = res.filter(item => item.categories.length > 0); // That's the main trick* !
+      const postsSliced = posts.slice(0, 4);
+
+      // Functions to create a short text out of whole blog's content
+      function toText(node) {
+        let tag = document.createElement("div");
+        tag.innerHTML = node;
+        node = tag.innerText;
+        return node;
+      }
+      function shortenText(text, startingPoint, maxLength) {
+        return text.length > maxLength
+          ? text.slice(startingPoint, maxLength)
+          : text;
+      }
+
+      // Put things in right spots of markup
+      let output = "";
+      postsSliced.forEach(item => {
+        output += `
+           <li class="blog__post">
+              <a href="${item.link}" target="_blank">
+                 <img src="${item.thumbnail}" class="blog__topImg"></img>
+                 <div class="blog__content">
+                    <div class="blog_preview">
+                       <h3 class="blog__title">${item.title}</h3>
+                       <p class="blog__intro">${"..." +
+                         shortenText(toText(item.content), 40, 330) +
+                         "..."}</p>
+                    </div>
+                    <hr>
+                    <div class="blog__info">
+                       <span class="blog__date">${shortenText(
+                         item.pubDate,
+                         0,
+                         10
+                       )}</span>
+                    </div>
+                 </div>
+              <a/>
+           </li>`;
+      });
+      document.querySelector(".blog__slider").innerHTML = output;
+    });
+};
