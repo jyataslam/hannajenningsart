@@ -1,17 +1,49 @@
 .art {
-    padding: 120px 0 60px;
+    padding: 10rem 0 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 
     @include respond(phone){
         padding: 60px 0;
     }
 
+    &__button {
+        margin-bottom: 3rem;
+        background: $color-primary-blue;
+        color: $color-white !important;
+        border: 2px solid $color-primary-blue;
+
+        &:hover {
+            background: transparent;
+            color: $color-black !important;
+            border: 2px solid $color-black;
+            text-decoration: none;
+        }
+    }
+
     &__title {
+        text-align: center;
         font-family: 'Open Sans Condensed', sans-serif;
         font-weight: 700;
-        font-size: 3.5rem;
+        font-size: 29rem;
+        margin-bottom: 1rem;
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: rgba(0, 0, 0, 0.1);
+        z-index: -1;
+
+        @include respond(tab-land){
+            top: 7%;
+        }
+
+        @include respond(phone){
+            top: 4%;
+            font-size: 24rem;
+        }
     }
 
     &__hr {
@@ -20,11 +52,19 @@
 
     &__subheader {
         font-family: inherit;
-        font-weight: 300;
-        color: $color-primary-text;
-        padding: 0 3rem 3rem;
+        font-weight: 400;
+        color: $color-black;
+        padding: 16rem 3rem 1.5rem;
         text-align: center;
         font-size: 2rem;
+
+        @include respond(tab-land){
+            padding-top: 15rem;
+        }
+
+        @include respond(phone){
+            padding-top: 18rem;
+        }
     }
 
     &__photo--wrapper {
