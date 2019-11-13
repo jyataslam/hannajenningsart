@@ -751,9 +751,9 @@ body {
   position: relative; }
   @media only screen and (max-width: 37.5em) {
     .art {
-      padding: 60px 0; } }
+      padding: 30px 0; } }
   .art__button {
-    margin-bottom: 3rem;
+    margin-bottom: 5rem;
     background: #e02b0f;
     color: #fff !important;
     border: 2px solid #e02b0f; }
@@ -769,7 +769,7 @@ body {
     font-size: 29rem;
     margin-bottom: 1rem;
     position: absolute;
-    top: 10%;
+    top: 17%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: rgba(0, 0, 0, 0.1);
@@ -779,7 +779,7 @@ body {
         top: 7%; } }
     @media only screen and (max-width: 37.5em) {
       .art__title {
-        top: 4%;
+        top: 17%;
         font-size: 24rem; } }
   .art__hr {
     padding-bottom: 3rem; }
@@ -838,7 +838,9 @@ body {
       margin-bottom: 6rem; }
       .art__row__button:hover {
         background: #e02b0f;
-        border: 2px solid #e02b0f; }
+        border: 2px solid #e02b0f;
+        text-decoration: none;
+        color: #fff; }
 
 .modal-dialog {
   width: 100% !important;
