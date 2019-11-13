@@ -6,11 +6,11 @@
     position: relative;
 
     @include respond(phone){
-        padding: 60px 0;
+        padding: 30px 0;
     }
 
     &__button {
-        margin-bottom: 3rem;
+        margin-bottom: 5rem;
         background: $color-primary-blue;
         color: $color-white !important;
         border: 2px solid $color-primary-blue;
@@ -30,7 +30,7 @@
         font-size: 29rem;
         margin-bottom: 1rem;
         position: absolute;
-        top: 10%;
+        top: 17%;
         left: 50%;
         transform: translate(-50%, -50%);
         color: rgba(0, 0, 0, 0.1);
@@ -41,7 +41,7 @@
         }
 
         @include respond(phone){
-            top: 4%;
+            top: 17%;
             font-size: 24rem;
         }
     }
@@ -126,6 +126,8 @@
             &:hover {
                 background: $color-primary-blue;
                 border: 2px solid $color-primary-blue;
+                text-decoration: none;
+                color: $color-white;
             }
         }
     }

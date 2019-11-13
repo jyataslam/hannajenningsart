@@ -18,6 +18,7 @@ $(document).ready(function() {
 
   $(parallax).parallax({ imageSrc: "/img/photos-one.jpg" });
 
+  fetchEtsy();
   fetchInstagram();
   fetchBlogPosts();
 
@@ -218,7 +219,7 @@ const buildArtCard = art => {
   div.attr("class", "art__row__container");
 };
 
-data.forEach(art => buildArtCard(art));
+// data.forEach(art => buildArtCard(art));
 
 // Fetch Blog Posts from Medium
 const fetchBlogPosts = () => {
