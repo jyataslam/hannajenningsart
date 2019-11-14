@@ -309,6 +309,27 @@
         font-size: 4rem;
         padding-bottom: .5rem;
     }
+
+    &__social {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        padding-top: 5rem;
+
+        &__icon {
+            height: 5rem;
+            padding: 0 2rem 0 0;
+            fill: #fff;
+        }
+    }
+
+    &__logo-container {
+
+        &__logo {
+            width: 28rem;
+            padding-top: 3rem;
+        }
+    }
 }
 
 .store-link-sidenav:hover {

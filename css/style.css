@@ -382,6 +382,18 @@ body {
     color: white;
     font-size: 4rem;
     padding-bottom: .5rem; }
+  .sidenav__social {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    padding-top: 5rem; }
+    .sidenav__social__icon {
+      height: 5rem;
+      padding: 0 2rem 0 0;
+      fill: #fff; }
+  .sidenav__logo-container__logo {
+    width: 28rem;
+    padding-top: 3rem; }
 
 .store-link-sidenav:hover {
   text-decoration: none;
@@ -558,12 +570,13 @@ body {
       width: 100%;
       padding: 4px;
       opacity: 1;
-      transition: opacity .3s ease-in-out; }
-      .photos__gray--container__photo:hover {
-        opacity: 0; }
+      transition: opacity 2s ease-in-out; }
       @media only screen and (max-width: 37.5em) {
         .photos__gray--container__photo {
           padding: 2px; } }
+
+.o-fade {
+  opacity: 0; }
 
 .parallax {
   min-height: 450px;

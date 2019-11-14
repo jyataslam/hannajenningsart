@@ -42,6 +42,8 @@ $(document).scroll(function() {
       $(socialIcon).removeClass("navigation__links-scrolled"),
       $(desktopNavWrapper).removeClass("navigation__wrapper__scrolled"),
       $(navLogo).removeClass("navigation__logo__scrolled"));
+  
+  fadeInAnimation();
 });
 
 // Handle Sidenav hamburger click
@@ -275,3 +277,23 @@ const fetchBlogPosts = () => {
       document.querySelector(".blog__slider").innerHTML = output;
     });
 };
+
+function fadeInAnimation () {
+  let fadeImage = $('.photos__gray--container__photo');
+  let windowHeight = $(window).outerHeight();
+  let windowTopPosition = $(window).scrollTop();
+  let windowBottomPosition = (windowTopPosition + windowHeight);
+
+  $.each(fadeImage, function(){
+      var el = $(this);
+      var elHeight = el.outerHeight();
+      var elTopPosition = el.offset().top;
+      var elBottomPosition = (elTopPosition + elHeight);
+
+      if ((elBottomPosition >= windowTopPosition) && (elTopPosition <= windowBottomPosition)){
+          el.addClass('o-fade')
+      } else {
+          el.removeClass('o-fade')
+      }
+  })
+}
