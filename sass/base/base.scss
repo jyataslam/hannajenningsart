@@ -33,6 +33,12 @@ body {
     }
 }
 
+p {
+    @include respond(phone){
+        font-size: 1.4rem;
+    }
+}
+
 .main {
     transition: .5s;
 }
