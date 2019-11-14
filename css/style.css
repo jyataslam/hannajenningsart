@@ -96,6 +96,10 @@ body {
     body {
       padding: 0; } }
 
+@media only screen and (max-width: 37.5em) {
+  p {
+    font-size: 1.4rem; } }
+
 .main {
   transition: .5s; }
 
@@ -124,7 +128,7 @@ body {
   background: #fff; }
 
 .general-btn {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin: 1.5rem auto 0;
   border-radius: 25px;
   padding: 8px 24px;
@@ -284,7 +288,7 @@ body {
       width: 50px;
       height: 50px;
       top: 0; } }
-  .hamburger__btn {
+  .hamburger_btn {
     position: absolute;
     width: 80px;
     height: 80px;
@@ -296,9 +300,10 @@ body {
     border-radius: 50%;
     border: none;
     outline: none;
+    -webkit-appearance: attachment;
     transition: margin .2s; }
     @media only screen and (max-width: 37.5em) {
-      .hamburger__btn {
+      .hamburger_btn {
         width: 50px;
         height: 50px; } }
   .hamburger__span {
@@ -428,7 +433,7 @@ body {
     -moz-osx-font-smoothing: grayscale; }
     @media only screen and (max-width: 37.5em) {
       .hero__title {
-        font-size: 4.5rem; } }
+        font-size: 5.5rem; } }
   .hero__sub-title {
     color: #fff;
     font-weight: 300;
@@ -437,7 +442,7 @@ body {
     text-transform: uppercase;
     letter-spacing: 0.13rem; }
   .hero__button {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin: 1.5rem auto 0;
     border-radius: 25px;
     padding: 8px 24px;
@@ -606,16 +611,21 @@ body {
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 3.5rem;
     text-align: center; }
+    @media only screen and (max-width: 37.5em) {
+      .about__header {
+        font-size: 4rem; } }
   .about__subheader {
     font-family: 'Open Sans Condensed', sans-serif;
     color: #e02b0f;
     text-align: center;
     padding-bottom: 2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .about__subheader {
+        font-size: 2.4rem; } }
   .about__text {
     color: #666666;
     text-align: left;
-    padding: 0 6rem 2rem;
-    font-size: 1.2rem; }
+    padding: 0 6rem 2rem; }
     @media only screen and (max-width: 56.25em) {
       .about__text {
         padding: 0 6rem 2rem; } }
@@ -776,7 +786,10 @@ body {
     z-index: -1; }
     @media only screen and (max-width: 75em) {
       .art__title {
-        top: 7%; } }
+        top: 16%; } }
+    @media only screen and (max-width: 56.25em) {
+      .art__title {
+        top: 17%; } }
     @media only screen and (max-width: 37.5em) {
       .art__title {
         top: 17%;
@@ -1184,7 +1197,7 @@ Remove or comment-out the code block below to see how the browser will fall-back
   .gallery {
     width: auto;
     margin: 0; }
-  @media (max-width: 40rem) {
+  @media (max-width: 37.5em) {
     .profile {
       grid-template-columns: auto 1fr;
       grid-row-gap: 1.5rem; }
@@ -1367,7 +1380,8 @@ Remove or comment-out the code block below to see how the browser will fall-back
     align-content: center;
     padding-top: 5rem; }
   .footer__copyright--text {
-    color: #fff; }
+    color: #fff;
+    font-size: 1.2rem; }
 
 .contact {
   padding: 80px 0; }

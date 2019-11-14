@@ -37,7 +37,11 @@
         z-index: -1;
 
         @include respond(tab-land){
-            top: 7%;
+            top: 16%;
+        }
+
+        @include respond(tab-port){
+            top: 17%;
         }
 
         @include respond(phone){
