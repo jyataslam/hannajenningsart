@@ -65,6 +65,10 @@
         -webkit-filter: invert(100);
         filter: invert(100);
 
+        &:hover {
+            cursor: pointer;
+        }
+
         &__scrolled {
             -webkit-filter: invert(0);
             filter: invert(0);
@@ -74,7 +78,9 @@
             margin-bottom: 0;
         }
 
-        @include respond(phone){
+        @include respond(tab-land){
+            -webkit-filter: none;
+            filter: none;
         }
     }
 
@@ -94,17 +100,33 @@
         }
     }
 
+    &__button {
+        font-size: 1.6rem;
+        text-transform: uppercase;
+        margin: 0 auto;
+        border-radius: 25px;
+        padding: 5px 24px;
+        border: 2px solid #fff;
+        background: transparent;
+        color: #fff;
+        letter-spacing: .08rem;
+        transition: all .5s ease;
+    }
+
     &__item {
         color: $color-white;
         padding: 1rem 2rem;
         text-transform: uppercase;
         transition: all .2s ease-in-out;
         letter-spacing: .15rem;
-        font-size: 2rem;
+        font-size: 1.6rem;
+        margin-bottom: 0;
+        line-height: 2.2;
 
         &:hover {
             text-decoration: none;
             color: $color-primary-blue;
+            cursor: pointer;
         }
     }
 
@@ -139,7 +161,6 @@
     &__links-scrolled {
         color: $color-black;
         fill: $color-black;
-        line-height: 1.9;
     }
 }
 
@@ -169,7 +190,7 @@
         top: 0;
     }
 
-    &__btn {
+    &_btn {
         position: absolute;
         width: 80px;
         height: 80px;
@@ -181,6 +202,7 @@
         border-radius: 50%;
         border: none;
         outline: none;
+        -webkit-appearance: attachment;
         transition: margin .2s;
 
         @include respond(phone){
@@ -287,6 +309,32 @@
         font-size: 4rem;
         padding-bottom: .5rem;
     }
+
+    &__social {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        padding-top: 5rem;
+
+        &__icon {
+            height: 5rem;
+            padding: 0 2rem 0 0;
+            fill: #fff;
+        }
+    }
+
+    &__logo-container {
+
+        &__logo {
+            width: 28rem;
+            padding-top: 3rem;
+        }
+    }
+}
+
+.store-link-sidenav:hover {
+    text-decoration: none;
+    color: $color-white;
 }
 
 // Classes added and removed when sidenav is open/closed on mobile

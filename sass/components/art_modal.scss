@@ -1,0 +1,44 @@
+.modal-dialog {
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    max-width:none !important;
+
+}
+
+.modal-content {
+    height: auto !important;
+    min-height: 100% !important;
+    border-radius: 0 !important;
+    background-color: #ececec !important;
+    border: none;
+}
+
+.art-close {
+    margin-right: 2rem;
+    font-size: 8rem;
+    color: $color-white;
+}
+
+.modal-body {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #111;
+}
+
+.modal-image {
+    height: 100%;
+    margin: auto;
+    object-fit: contain;
+    max-width: 100%;
+}
+
+.art-modal-close {
+    z-index: 1;
+}

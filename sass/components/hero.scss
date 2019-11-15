@@ -41,7 +41,7 @@
         -moz-osx-font-smoothing: grayscale;
 
         @include respond(phone){
-            font-size: 4.5rem;
+            font-size: 5.5rem;
         }
     }
 
@@ -55,7 +55,7 @@
     }
 
     &__button {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         margin: 1.5rem auto 0;
         border-radius: 25px;
         padding: 8px 24px;
@@ -83,6 +83,7 @@
                 background: $color-white;
                 color: $color-primary-blue;
                 border: 2px solid $color-white;
+                text-decoration: none;
             }
         }
     }

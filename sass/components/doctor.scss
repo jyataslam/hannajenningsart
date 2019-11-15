@@ -1,4 +1,4 @@
-.doctor {
+.about {
     padding: 8rem 0 5rem;
     position: relative;
 
@@ -32,6 +32,10 @@
         font-family: 'Open Sans Condensed', sans-serif;
         font-size: 3.5rem;
         text-align: center;
+
+        @include respond(phone){
+            font-size: 4rem;
+        }
     }
 
     &__subheader {
@@ -39,13 +43,16 @@
         color: $color-primary-blue;
         text-align: center;
         padding-bottom: 2rem;
+
+        @include respond(phone){
+            font-size: 2.4rem;
+        }
     }
 
     &__text {
         color: $color-primary-text;
         text-align: left;
         padding: 0 6rem 2rem;
-        font-size: 1.2rem;
 
         @include respond(tab-port){
             padding: 0 6rem 2rem;

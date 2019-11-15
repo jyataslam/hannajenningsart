@@ -1,4 +1,5 @@
 .photos {
+    position: relative;
     padding-bottom: 60px;
 
     .row {
@@ -22,15 +23,48 @@
     &__photo {
         width: 100%;
         padding: 4px;
-        opacity: 1;
-        transition: all .5s ease;
-
-        &:hover {
-            opacity: 0;
-        }
 
         @include respond(phone){
             padding: 2px;
         }
     }
+
+    &__gray--container {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        .row {
+            padding: 0 4px;
+    
+            @include respond(phone){
+                padding: 0 2px;
+            }
+        }
+    
+        &__column {
+            flex: 25%;
+            max-width: 25%;
+    
+            @include respond(tab-port){
+                flex: 50%;
+                max-width: 50%;
+            }
+        }
+    
+        &__photo {
+            width: 100%;
+            padding: 4px;
+            opacity: 1;
+            transition: opacity 2s ease-in-out;
+
+            @include respond(phone){
+                padding: 2px;
+            }
+        }
+    }
+}
+
+.o-fade {
+    opacity: 0;
 }

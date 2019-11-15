@@ -1,10 +1,14 @@
 .instagram {
-    padding: 80px 0 100px;
-    color: $color-white;
-    background: #111;
+    padding: 16rem 0 100px;
+    color: $color-black;
+    position: relative;
 
     @include respond(phone){
-        padding: 60px 0 80px;
+        padding: 80px 0 30px;
+    }
+
+    &__container {
+        max-width: 93.5rem;
     }
 
     &__row {
@@ -13,10 +17,38 @@
 
     &__header {
         font-family: 'Open Sans Condensed', sans-serif;
-        font-size: 3.5rem;
+        font-size: 20rem;
         text-align: center;
-        margin-bottom: 1rem;
-        line-height: 2;
+        padding-bottom: .5rem;
+        font-weight: 700;
+        position: absolute;
+        top: 12%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: rgba(0, 0, 0, 0.1);
+        z-index: -1;
+
+        @include respond(phone){
+            top: 10%;
+            font-size: 12rem;
+        }
+    }
+
+    &__follow {
+        border: 1px solid transparent;
+        background-color: #3897f0;
+        border-radius: 4px;
+        padding: 5px 9px;
+        color: $color-white;
+        font-weight: bold;
+        letter-spacing: .02rem;
+        margin: auto 2rem;
+        text-align: center;
+
+        &:hover {
+            text-decoration: none;
+            color: $color-white;
+        }
     }
 
     &__header--container {
@@ -34,10 +66,16 @@
     &__icon {
         height: 5rem;
         padding-left: 1rem;
+        transition: all .5s ease-in-out;
+
+        &:hover {
+            transform: rotateX(180deg);
+        }
     }
 
     &__hr {
-        border-top: 3px solid $color-white;
+        border-top: 3px solid $color-black;
+        padding-bottom: 0;
     }
 
     &__photo--container {
@@ -47,11 +85,11 @@
     }
 
     &__photo {
-        height: 24rem;
-        width: 18rem;
+        height: 27rem;
+        width: 27rem;
         margin: 10px 1px;
         overflow: hidden;
-        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
+        // box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
         background-color: $color-black;
 
         &:hover .instagram__fetched {
