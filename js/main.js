@@ -46,6 +46,11 @@ $(document).scroll(function() {
   fadeInAnimation();
 });
 
+// Handle Loading Animation Fadeout
+$(window).on('load', () => {
+  $('#loading').fadeOut();
+})
+
 // Handle Sidenav hamburger click
 handleNavAnimationClick = () => {
   if ($(hamburger).hasClass("on")) {
